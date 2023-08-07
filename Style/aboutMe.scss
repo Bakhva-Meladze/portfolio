@@ -1,0 +1,53 @@
+.aboutMe {
+  width: 400px;
+  height: 20px;
+  top: 20%;
+  left: 85%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: rgb(203, 229, 255);
+  transition: left  2s ease-out 200ms, top 2s ease-out 100ms,
+  height 2s ease-out 100ms, width 2s ease-out 100ms, background-color 2s ease-out 100ms;
+  color: #001D32;
+  border: 2px solid #3498db; /* Border color and style */
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 10%;
+  overflow: hidden;
+  padding-top: 5px;
+
+  .title{
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    color: #001D32;
+    font-family: 'Freedom45', sans-serif;
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+}
+.aboutMe:hover,
+.aboutMe:active {
+  background-color: #ffcc00;
+  width: 60%;
+  height: 500px;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+
+
+}

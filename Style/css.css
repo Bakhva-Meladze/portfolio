@@ -1,0 +1,221 @@
+@import url("https://fonts.cdnfonts.com/css/freedom45");
+@import url("https://fonts.cdnfonts.com/css/howlimit");
+.head {
+  width: 98%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background-color: #021F23;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #001D32;
+  border: 2px solid #3498db; /* Border color and style */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 100px;
+  transition: border 2s ease-out 100ms;
+}
+.head .button {
+  background: hsl(227, 10%, 10%);
+  color: #ffffff;
+  border: 1px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  animation: pulse 1s;
+  transition: border 1s ease-out 100ms, background 1s ease-out 100ms, color 1s ease-out 100ms;
+}
+.head .button:hover,
+.head .button:active {
+  animation: pulse 1s;
+  border: 1px solid #E2D1F9;
+  background: #ffffff;
+  color: hsl(227, 10%, 10%);
+}
+
+.head:hover,
+.head:active {
+  color: #78F3E2;
+  border: 2px solid #A5A1FF; /* Border color and style */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.aboutMe {
+  width: 400px;
+  height: 20px;
+  top: 20%;
+  left: 85%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: rgb(203, 229, 255);
+  transition: left 2s ease-out 200ms, top 2s ease-out 100ms, height 2s ease-out 100ms, width 2s ease-out 100ms, background-color 2s ease-out 100ms;
+  color: #001D32;
+  border: 2px solid #3498db; /* Border color and style */
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 10%;
+  overflow: hidden;
+  padding-top: 5px;
+}
+.aboutMe .title {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  color: #001D32;
+  font-family: "Freedom45", sans-serif;
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.aboutMe:hover,
+.aboutMe:active {
+  background-color: #ffcc00;
+  width: 60%;
+  height: 500px;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.mySkills {
+  /* width: 400px;
+   height: 500px;
+   position: absolute;
+   left: 1%;
+   background-color: rgb(203, 229, 255);
+   transition: height 2s ease-out 100ms, width 2s ease-out 100ms, background-color 2s ease-out 100ms;
+   color: #001D32;
+   border: 2px solid #3498db; !* Border color and style *!
+   border-radius: 8px; !* Rounded corners *!
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); !* Box shadow for depth effect *!
+   padding: 10px;
+   margin-top: 10%;
+   margin-bottom: 10%;*/
+  width: 400px;
+  height: 20px;
+  top: 20%;
+  left: 14%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: rgb(203, 229, 255);
+  transition: left 2s ease-out 200ms, top 2s ease-out 100ms, height 2s ease-out 100ms, width 2s ease-out 200ms, background-color 2s ease-out 100ms;
+  color: #001D32;
+  border: 2px solid #3498db; /* Border color and style */
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 10%;
+  overflow: hidden;
+  padding-top: 5px;
+}
+.mySkills .title {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  color: red;
+  font-family: "Freedom45", sans-serif;
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.mySkills .skill {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.mySkills .skill img {
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid hsl(227, 10%, 10%);
+  border-radius: 5px;
+}
+.mySkills .skill h1 {
+  font-family: Bradley hand, cursive;
+  margin-left: 10px;
+  margin-top: 0px;
+  height: 50px;
+  border: 1px solid hsl(227, 10%, 10%);
+  border-radius: 5px;
+}
+.mySkills .js {
+  background: #ffcc00;
+  border: 1px solid #FFD700;
+}
+.mySkills .react {
+  background: #61DBFB;
+  border: 1px solid #61DBFB;
+}
+.mySkills .css {
+  background: #264de4;
+  border: 1px solid #264de4;
+}
+.mySkills .php {
+  background: #484C89;
+  border: 1px solid #777BB3;
+}
+.mySkills .oop {
+  background: #001D32;
+  border: #001D32;
+  color: #ffffff;
+}
+
+.mySkills:hover,
+.mySkills:active {
+  background-color: #ffcc00;
+  width: 40%;
+  height: 500px;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.myProjects {
+  width: 400px;
+  height: 400px;
+  background: #ffcc00;
+  color: black;
+  margin-top: 40%;
+}
+
+body {
+  background-color: black;
+  padding-right: 10px;
+}
+
+/*# sourceMappingURL=css.css.map */

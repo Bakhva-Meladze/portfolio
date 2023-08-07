@@ -1,15 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="Style/css.css">
+    <link href="https://fonts.cdnfonts.com/css/freedom45" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/howlimit" rel="stylesheet">
+
+
+
+
+
 </head>
 <body>
- <div>
-   <button>About me</button>
-   <button>My skills</button>
-   <button>Contact information</button>
+ <div class="head">
+   <button class="button" id="buttonAboutMe">About me</button>
+   <button class="button" id="buttonMySkills">My skills</button>
+   <button class="button" id="buttonContact">Contact information</button>
+   <button class="button" id="myProjects">My projects</button>
+   <select class="button" id="language">
+         <option>Eng</option>
+         <option>Geo</option>
+   </select>
  </div>
+ <div  id="aboutMe"class="aboutMe">
+     <div class="title">there is information about me</div>
+     <div class="cv-text"> I am cool person and I know programming language</div>
+ </div>
+ <div id="mySkills" class="mySkills">
+     <div class="title">my skills list</div>
+     <div class="skill js">
+         <img src="images/javascript-39404.png">
+         <p><h1>JavaScript</h1></p>
+     </div>
+     <div class="skill react">
+         <img src="images/img.png">
+         <p><h1>React.js</h1></p>
+     </div>
+     <div class="skill php">
+         <img src="images/php-logo-20743.png">
+         <p><h1>PHP</h1></p>
+     </div>
+     <div class="skill css">
+         <img src="images/css.png">
+         <p><h1>CSS</h1></p>
+     </div>
+     <div class="skill oop">
+         <img src="images/oop.jpg">
+         <p><h1>OOP</h1></p>
+     </div>
+ </div>
+ <div class="myProjects">
+     <a target="_blank" href="https://codehs.com/sandbox/id/shoot-AXxskI/run">Visit Example Website</a>
+ </div>
+
 
 </body>
 </html>
+<script type="module" src="index.js">
+
+</script>
