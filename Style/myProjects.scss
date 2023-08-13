@@ -1,10 +1,77 @@
 
 
 .myProjects {
-  width: 400px;
-  height: 400px;
-  background: #ffcc00;
-  color: black;
-  margin-top:40%;
+  width: 90%;
+  height: auto;
+  color: #001D32;
+  margin-top: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+
+  .title{
+    margin-top:10px;
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    color: #ffffff;
+    font-family: 'Freedom45', sans-serif;
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+  .containOfDivs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .contains {
+      width: 300px;
+      border: 2px solid #001D32;
+      height: 300px;
+      margin-left: 40px;
+      margin-top: 40px;
+
+
+      img {
+        margin-left: 10px;
+        margin-top: 20px;
+        width: 280px;
+        height: 200px;
+      }
+
+      p {
+        margin-left:10px;
+        font-family: 'Freedom45', sans-serif;
+
+      }
+
+    }
+    .contains:hover,
+    .contqains:active
+    {
+      border: 2px solid darkslateblue;
+      border-radius:10px;
+
+    }
+
+  }
+
+
 
 }
+

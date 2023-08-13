@@ -1,5 +1,6 @@
 .head {
-  width: 98%;
+  position: fixed;
+  width: 90%;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -9,38 +10,39 @@
   padding-top: 10px;
   padding-bottom: 10px;
   color: #001D32;
-  border: 2px solid #3498db; /* Border color and style */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-bottom: 100px;
-  transition: border 2s ease-out 100ms;
+  transition: background-color 1s ease-out 100ms, opacity 1s ease-out 100ms;
+  opacity: 0.8;
+  margin-top: 50px;
 
   .button {
-    background: hsl(227, 10%, 10%);
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
     color: #ffffff;
-    border: 1px solid;
-    font: inherit;
-    line-height: 1;
-    margin: 0.5em;
-    padding: 1em 2em;
-    animation: pulse 1s;
-    transition: border 1s ease-out 100ms, background 1s ease-out 100ms, color 1s ease-out 100ms;
+    align-items: center;
+    text-decoration: inherit;
+    text-align: center;
+    text-shadow: 1px 1px 1px #ff9a3c;
+    box-shadow: 1px 2px 3px  darkgrey;
+    href: inherit;
+    padding-top: 10px;
   }
+
   .button:hover,
   .button:active {
-    animation: pulse 1s;
-    border: 1px solid #E2D1F9;
-    background: #ffffff;
+    transition: 1s ease-in-out;
+    background: #4F95DA;
     color: hsl(227, 10%, 10%);
+    box-shadow: 2px 40px 100px #3498db ;
+
   }
 
 }
 .head:hover,
 .head:active {
-  color: #78F3E2;
-  border: 2px solid #A5A1FF; /* Border color and style */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 100%;
 }

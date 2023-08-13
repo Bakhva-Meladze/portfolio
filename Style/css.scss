@@ -1,12 +1,47 @@
 @import url('https://fonts.cdnfonts.com/css/freedom45');
 @import url('https://fonts.cdnfonts.com/css/howlimit');
+@import url('https://fonts.cdnfonts.com/css/h-huddle-stone');
+@import url('https://fonts.cdnfonts.com/css/broken-crowbar');
+
+
 @import "head";
 @import "aboutMe";
 @import "mySkills";
 @import "myProjects";
 @import "address";
+html {
+  scroll-behavior: smooth;
+  body {
+    background-color: #021F23;
+    color: #001D32;
+    .word {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
 
-body {
-  background-color: black;
-  padding-right: 10px;
+      .numeric {
+        font-size: 100px;
+        width: auto;
+        color: red;
+        text-shadow: 6px 2px 1px red;
+        filter: brightness(100%);
+
+      }
+    }
+
+    .containers {
+
+      margin-left: 50px;
+      background-color: #001D32;
+      color: rgb(203, 229, 255);
+      border: 2px solid #3498db; /* Border color and style */
+      border-radius: 8px; /* Rounded corners */
+      overflow: hidden;
+      padding-top: 5px;
+
+    }
+
+  }
 }
+

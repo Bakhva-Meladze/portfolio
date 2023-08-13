@@ -1,36 +1,11 @@
 .mySkills {
- /* width: 400px;
-  height: 500px;
-  position: absolute;
-  left: 1%;
-  background-color: rgb(203, 229, 255);
-  transition: height 2s ease-out 100ms, width 2s ease-out 100ms, background-color 2s ease-out 100ms;
-  color: #001D32;
-  border: 2px solid #3498db; !* Border color and style *!
-  border-radius: 8px; !* Rounded corners *!
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); !* Box shadow for depth effect *!
-  padding: 10px;
-  margin-top: 10%;
-  margin-bottom: 10%;*/
-  width: 400px;
-  height: 20px;
-  top: 20%;
-  left: 14%;
+  width: 90%;
+  opacity: 3;
+  margin-top: 100px;
 
-  position: absolute;
-  transform: translate(-50%, -50%);
-  background-color: rgb(203, 229, 255);
-  transition: left  2s ease-out 200ms,
-  top 2s ease-out 100ms,
-  height 2s ease-out 100ms,
-  width 2s ease-out 200ms,
-  background-color 2s ease-out 100ms;
-  color: #001D32;
-  border: 2px solid #3498db; /* Border color and style */
-  border-radius: 8px; /* Rounded corners */
-  margin-top: 10%;
-  overflow: hidden;
-  padding-top: 5px;
+
+
+
   .title {
     /* animation properties */
     -moz-transform: translateX(100%);
@@ -62,6 +37,7 @@
     justify-content: flex-start;
     border-radius: 5px;
     margin-top:5px;
+    transition: opacity 2s ease-out 200ms;
 
     img {
       left: 10px;
@@ -106,15 +82,11 @@
   }
 
 }
+/*
 .mySkills:hover,
 .mySkills:active {
-  background-color: #ffcc00;
-  width: 40%;
-  height: 500px;
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  transform: translate(-50%, -50%);
+  width: 90%;
+  opacity: 3;
 
 
-}
+}*/

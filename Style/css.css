@@ -1,7 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/freedom45");
 @import url("https://fonts.cdnfonts.com/css/howlimit");
+@import url("https://fonts.cdnfonts.com/css/h-huddle-stone");
+@import url("https://fonts.cdnfonts.com/css/broken-crowbar");
 .head {
-  width: 98%;
+  position: fixed;
+  width: 90%;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -11,63 +14,54 @@
   padding-top: 10px;
   padding-bottom: 10px;
   color: #001D32;
-  border: 2px solid #3498db; /* Border color and style */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-bottom: 100px;
-  transition: border 2s ease-out 100ms;
+  transition: background-color 1s ease-out 100ms, opacity 1s ease-out 100ms;
+  opacity: 0.8;
+  margin-top: 50px;
 }
 .head .button {
-  background: hsl(227, 10%, 10%);
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
   color: #ffffff;
-  border: 1px solid;
-  font: inherit;
-  line-height: 1;
-  margin: 0.5em;
-  padding: 1em 2em;
-  animation: pulse 1s;
-  transition: border 1s ease-out 100ms, background 1s ease-out 100ms, color 1s ease-out 100ms;
+  align-items: center;
+  text-decoration: inherit;
+  text-align: center;
+  text-shadow: 1px 1px 1px #ff9a3c;
+  box-shadow: 1px 2px 3px darkgrey;
+  href: inherit;
+  padding-top: 10px;
 }
 .head .button:hover,
 .head .button:active {
-  animation: pulse 1s;
-  border: 1px solid #E2D1F9;
-  background: #ffffff;
+  transition: 1s ease-in-out;
+  background: #4F95DA;
   color: hsl(227, 10%, 10%);
+  box-shadow: 2px 40px 100px #3498db;
 }
 
 .head:hover,
 .head:active {
-  color: #78F3E2;
-  border: 2px solid #A5A1FF; /* Border color and style */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 100%;
 }
 
 .aboutMe {
-  width: 400px;
-  height: 20px;
-  top: 20%;
-  left: 85%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  background-color: rgb(203, 229, 255);
-  transition: left 2s ease-out 200ms, top 2s ease-out 100ms, height 2s ease-out 100ms, width 2s ease-out 100ms, background-color 2s ease-out 100ms;
-  color: #001D32;
-  border: 2px solid #3498db; /* Border color and style */
-  border-radius: 8px; /* Rounded corners */
-  margin-top: 10%;
-  overflow: hidden;
-  padding-top: 5px;
+  height: 400px;
+  opacity: 3;
+  width: 90%;
+  text-align: center;
+  margin-top: 300px;
 }
 .aboutMe .title {
   /* animation properties */
+  opacity: 2;
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  color: #001D32;
+  color: rgb(203, 229, 255);
   font-family: "Freedom45", sans-serif;
   -moz-animation: my-animation 15s linear infinite;
   -webkit-animation: my-animation 15s linear infinite;
@@ -85,46 +79,25 @@
     transform: translateX(-100%);
   }
 }
+.aboutMe .cv-text {
+  font-family: "h Huddle Stone", sans-serif;
+}
 
-.aboutMe:hover,
-.aboutMe:active {
-  background-color: #ffcc00;
-  width: 60%;
-  height: 500px;
-  position: absolute;
-  top: 30%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+.containers:hover,
+.containers:active {
+  /* !*background-color: #ffcc00;
+   width: 600px;
+   height: 500px;*!
+   height: 400px;
+   opacity: 3;
+   width: 90%;*/
+  box-shadow: 2px 40px 100px #3498db;
 }
 
 .mySkills {
-  /* width: 400px;
-   height: 500px;
-   position: absolute;
-   left: 1%;
-   background-color: rgb(203, 229, 255);
-   transition: height 2s ease-out 100ms, width 2s ease-out 100ms, background-color 2s ease-out 100ms;
-   color: #001D32;
-   border: 2px solid #3498db; !* Border color and style *!
-   border-radius: 8px; !* Rounded corners *!
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); !* Box shadow for depth effect *!
-   padding: 10px;
-   margin-top: 10%;
-   margin-bottom: 10%;*/
-  width: 400px;
-  height: 20px;
-  top: 20%;
-  left: 14%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  background-color: rgb(203, 229, 255);
-  transition: left 2s ease-out 200ms, top 2s ease-out 100ms, height 2s ease-out 100ms, width 2s ease-out 200ms, background-color 2s ease-out 100ms;
-  color: #001D32;
-  border: 2px solid #3498db; /* Border color and style */
-  border-radius: 8px; /* Rounded corners */
-  margin-top: 10%;
-  overflow: hidden;
-  padding-top: 5px;
+  width: 90%;
+  opacity: 3;
+  margin-top: 100px;
 }
 .mySkills .title {
   /* animation properties */
@@ -156,6 +129,7 @@
   justify-content: flex-start;
   border-radius: 5px;
   margin-top: 5px;
+  transition: opacity 2s ease-out 200ms;
 }
 .mySkills .skill img {
   left: 10px;
@@ -194,28 +168,187 @@
   color: #ffffff;
 }
 
+/*
 .mySkills:hover,
 .mySkills:active {
-  background-color: #ffcc00;
-  width: 40%;
-  height: 500px;
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-}
+  width: 90%;
+  opacity: 3;
 
+
+}*/
 .myProjects {
-  width: 400px;
-  height: 400px;
-  background: #ffcc00;
-  color: black;
-  margin-top: 40%;
+  width: 90%;
+  height: auto;
+  color: #001D32;
+  margin-top: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+}
+.myProjects .title {
+  margin-top: 10px;
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  color: #ffffff;
+  font-family: "Freedom45", sans-serif;
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.myProjects .containOfDivs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.myProjects .containOfDivs .contains {
+  width: 300px;
+  border: 2px solid #001D32;
+  height: 300px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+.myProjects .containOfDivs .contains img {
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 280px;
+  height: 200px;
+}
+.myProjects .containOfDivs .contains p {
+  margin-left: 10px;
+  font-family: "Freedom45", sans-serif;
+}
+.myProjects .containOfDivs .contains:hover,
+.myProjects .containOfDivs .contqains:active {
+  border: 2px solid darkslateblue;
+  border-radius: 10px;
 }
 
-body {
-  background-color: black;
-  padding-right: 10px;
+.contact {
+  background-color: #001D32;
+  margin-top: 200px;
+  width: 90%;
+}
+.contact .title {
+  margin-top: 10px;
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  color: #ffffff;
+  font-family: "Freedom45", sans-serif;
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.contact .containerOfAtributes {
+  margin: 5px 5px 5px 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.contact .containerOfAtributes .addressAtributes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-radius: 5px;
+}
+.contact .containerOfAtributes .addressAtributes a {
+  font-family: Bradley hand, cursive;
+  margin-left: 10px;
+  margin-top: 0px;
+  height: 50px;
+  border: 1px solid hsl(227, 10%, 10%);
+  border-radius: 5px;
+}
+.contact .containerOfAtributes .addressAtributes img {
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid hsl(227, 10%, 10%);
+  border-radius: 5px;
+}
+.contact .containerOfAtributes .addressAtributes a {
+  font-family: "Roboto", sans-serif;
+  color: #ccc;
+  display: inline-block;
+  font-size: 2rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+.contact .containerOfAtributes .addressAtributes a:hover {
+  animation: circle-anim 0.3s ease forwards;
+  transition: all 0.4s ease;
+}
+.contact .containerOfAtributes .addressAtributes .gitHub:hover {
+  background: #d0d0d0;
+}
+.contact .containerOfAtributes .addressAtributes .linkedin:hover {
+  background: #0A66C2;
+}
+.contact .containerOfAtributes .addressAtributes .call:hover {
+  background: #7CFC00;
+}
+.contact .containerOfAtributes .addressAtributes .gmail:hover {
+  background: color-mix(in srgb, yellow, red 50%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #021F23;
+  color: #001D32;
+}
+html body .word {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+html body .word .numeric {
+  font-size: 100px;
+  width: auto;
+  color: red;
+  text-shadow: 6px 2px 1px red;
+  filter: brightness(100%);
+}
+html body .containers {
+  margin-left: 50px;
+  background-color: #001D32;
+  color: rgb(203, 229, 255);
+  border: 2px solid #3498db; /* Border color and style */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden;
+  padding-top: 5px;
 }
 
 /*# sourceMappingURL=css.css.map */

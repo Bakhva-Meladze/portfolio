@@ -1,31 +1,12 @@
 import {buttonText} from "./translateText.js";
-console.log("hi");
+import domManipulation from "./domManipulation.js";
+import screenChangeClass from "./domManipulation.js";
+
 const buttonAboutMe = document.querySelector("#buttonAboutMe");
 const buttonSkill = document.querySelector("#buttonMySkills");
 const contactButton = document.querySelector("#buttonContact");
 const buttonProjects = document.querySelector("#myProjects");
 const selectLanguage = document.querySelector("#language");
-const infoDiv = document.getElementById("aboutMe");
-const skillsDiv = document.getElementById("mySkills");
-
-buttonSkill.addEventListener('click', function (){
-    if(skillsDiv.style.display === "none") {
-        skillsDiv.style.display = "block";
-    }
-    else{
-        skillsDiv.style.display ="none"
-    }
-
-});
-
-buttonAboutMe.addEventListener('click',function(){
-    if(infoDiv.style.display === "none") {
-        infoDiv.style.display = "block";
-    }
-    else{
-        infoDiv.style.display ="none"
-    }
-});
 
 selectLanguage.addEventListener('click',function(e){
     let i =0;
@@ -35,5 +16,63 @@ selectLanguage.addEventListener('click',function(e){
     contactButton.innerHTML =buttonText.myContact[i];
     buttonProjects.innerHTML =buttonText.myProjects[i];
 
+});
 
-})
+const arrayOfButtonClass = ["buttonAboutMe","buttonMySkills","buttonContact","myProjects"];
+const arrayOfDivs = ["aboutMe","mySkills","address","myProject"];
+
+arrayOfButtonClass.forEach((value,key) =>{
+    document.getElementById(value).addEventListener("click",function(){
+        const classes = new screenChangeClass();
+        classes.documentButtonElements(document.getElementById(arrayOfDivs[key]));
+    });
+});
+
+addEventListener("scroll",function(){
+    console.log(Math.floor(window.scrollY));
+});
+ // let i = 0;
+ // let num =1000;
+ // if(i ===2){
+ //     num = 10;
+ //
+ // }
+ let state ={
+     i:0,
+     num:1000,
+ }
+
+ if(state.i >2){
+     state.num =10;
+ }
+
+function span_it(str) {
+    return str.split("").map(letter => "<span class='random_javascript'>" + letter + "</span>").join("")
+}
+let random = 0;
+setInterval(function () {
+    if(state.i % 2 ===0) {
+        const elem = document.getElementById("j");
+        elem.innerHTML = span_it(elem.innerText);
+
+        // now each letter
+        var spans = elem.querySelectorAll(".random_javascript");
+        console.log("spans length: " + spans.length);
+
+        random = Math.floor(Math.random() * (spans.length - 1));
+        spans[random].style.filter = "brightness(100%)";
+    }
+    if(state.i % 2 !==0) {
+        const elem = document.getElementById("j");
+
+        var spans = elem.querySelectorAll(".random_javascript");
+        spans[random].style.filter = "brightness(10%)";
+
+    }
+      state.i++;
+    if(state.i === 3){
+        state.i=0;
+    }
+
+}, state.num);
+
