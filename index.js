@@ -1,6 +1,10 @@
 import {buttonText} from "./translateText.js";
-import domManipulation from "./domManipulation.js";
-import screenChangeClass from "./domManipulation.js";
+import {arrayOfButtonClass,arrayOfDivs} from "./attributes.js";
+import  domManipulation from "./domManipulation.js";
+
+console.log(domManipulation);
+
+
 
 const buttonAboutMe = document.querySelector("#buttonAboutMe");
 const buttonSkill = document.querySelector("#buttonMySkills");
@@ -17,29 +21,26 @@ selectLanguage.addEventListener('click',function(e){
     buttonProjects.innerHTML =buttonText.myProjects[i];
 
 });
-
-const arrayOfButtonClass = ["buttonAboutMe","buttonMySkills","buttonContact","myProjects"];
-const arrayOfDivs = ["aboutMe","mySkills","address","myProject"];
-
 arrayOfButtonClass.forEach((value,key) =>{
     document.getElementById(value).addEventListener("click",function(){
-        const classes = new screenChangeClass();
-        classes.documentButtonElements(document.getElementById(arrayOfDivs[key]));
+/*
+        const classes = new domManipulation();
+*/
+         domManipulation.changeScrollLight(document.getElementById(arrayOfDivs[key]));
+/*
+        classes.changeScrollLight(document.getElementById(arrayOfDivs[key]));
+*/
     });
 });
 
 addEventListener("scroll",function(){
     console.log(Math.floor(window.scrollY));
 });
- // let i = 0;
- // let num =1000;
- // if(i ===2){
- //     num = 10;
- //
- // }
+
  let state ={
      i:0,
      num:1000,
+     test: "hi"
  }
 
  if(state.i >2){
@@ -51,28 +52,45 @@ function span_it(str) {
 }
 let random = 0;
 setInterval(function () {
-    if(state.i % 2 ===0) {
-        const elem = document.getElementById("j");
-        elem.innerHTML = span_it(elem.innerText);
 
-        // now each letter
-        var spans = elem.querySelectorAll(".random_javascript");
-        console.log("spans length: " + spans.length);
+        if(state.i % 2 ===0) {
+            const elem = document.getElementById("profession");
+            elem.innerHTML = span_it(elem.innerText);
+            // now each letter
+            var spans = elem.querySelectorAll(".random_javascript");
 
-        random = Math.floor(Math.random() * (spans.length - 1));
-        spans[random].style.filter = "brightness(100%)";
-    }
-    if(state.i % 2 !==0) {
-        const elem = document.getElementById("j");
+            console.log("spans length: " + spans.length);
 
-        var spans = elem.querySelectorAll(".random_javascript");
-        spans[random].style.filter = "brightness(10%)";
+            random = Math.floor(Math.random() * (spans.length - 1));
+            setInterval(function(){
+                spans[random].style.filter = "brightness(100%)";
 
-    }
-      state.i++;
-    if(state.i === 3){
-        state.i=0;
-    }
 
-}, state.num);
+            }, 100);
+        }
+        if(state.i % 2 !==0) {
+            const elem = document.getElementById("profession");
+            setTimeout(function(){
+
+
+            },10);
+
+            var spans = elem.querySelectorAll(".random_javascript");
+            setInterval(function(){
+                spans[random].style.filter = "brightness(10%)";
+            }, 100);
+
+        }
+        state.i++;
+        if(state.i === 3){
+            state.i=0;
+        }
+
+
+}, 1000);
+
+console.log(state.test);
+state.test = "hop change";
+console.log(state.test);
+
 

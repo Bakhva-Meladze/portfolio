@@ -335,10 +335,17 @@ html body .word {
   justify-content: flex-start;
 }
 html body .word .numeric {
-  font-size: 100px;
+  font-size: 50px;
   width: auto;
   color: red;
-  text-shadow: 6px 2px 1px red;
+  text-shadow: 5px 2px 1px red;
+  filter: brightness(100%);
+}
+html body .word .name {
+  font-size: 30px;
+  width: auto;
+  color: red;
+  text-shadow: 1px 2px 1px red;
   filter: brightness(100%);
 }
 html body .containers {

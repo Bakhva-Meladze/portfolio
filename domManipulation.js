@@ -1,27 +1,24 @@
 
 
-export default class screenChangeClass {
+class domManipulation {
 
     constructor(props) {
         this.state = {
             scrollNumber: 200
         }
-        this.documentButtonElements = this.documentButtonElements.bind(this);
+        this.changeScrollLight = this.changeScrollLight.bind(this);
+        this.changeTextTimeInterval();
+    }
+    changeTextTimeInterval () {
+        console.log("hello");
+
     }
 
-    documentDivs = () => {
-        console.log("first Div");
-
-        return document.getElementById("aboutMe");
-
-    }
-
-    documentButtonElements(divElementID) {
+    changeScrollLight(divElementID){
 
         let scroll = Math.floor(window.scrollY);
         let result = 0;
         let scrollheight = divElementID.offsetTop - this.state.scrollNumber;
-        console.log(scrollheight);
         let k = scroll - scrollheight;
         let t = scrollheight - scroll;
         if (scroll > scrollheight) {
@@ -47,6 +44,8 @@ export default class screenChangeClass {
         window.scrollBy(0, result);
     }
 }
+
+export default new domManipulation();
 
 
 
