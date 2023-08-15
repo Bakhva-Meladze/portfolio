@@ -1,5 +1,6 @@
 
 let random = 0;
+let randomName =0;
 let state = {
     i: 0,
     num: 1000,
@@ -13,32 +14,54 @@ class domManipulation {
             scrollNumber: 250
         }
         this.changeScrollLight = this.changeScrollLight.bind(this);
-    }
-     spanIt (str){
-        return str.split("").map(letter => "<span class='random_javascript'>" + letter + "</span>").join("");
+
     }
 
-    changeTextTimeInterval (divElementID) {
+
+    changeTextTimeInterval= (divElementID)=> {
         const that=this;
-        setInterval(function () {
-            const elem = divElementID;
-            elem.innerHTML = that.spanIt(elem.innerText);
-            // now each letter
-            var spans = elem.querySelectorAll(".random_javascript");
-            random = Math.floor(Math.random() * (spans.length - 1));
+        function spanIt (str){
+            return str.split("").map(letter => "<span class='random_javascript'>" + letter + "</span>").join("");
+        }
+            if(divElementID.id ==="name"){
 
-            setInterval(function () {
-                spans[random].style.filter = "brightness(100%)";
+                const elem = divElementID;
+                elem.innerHTML = spanIt(elem.innerText);
+                // now each letter
+                var spans = elem.querySelectorAll(".random_javascript");
+                randomName = Math.floor(Math.random() * (spans.length - 1));
 
-            }, 5);
-            setInterval(function () {
+                setInterval(function () {
+                    spans[randomName].style.filter = "brightness(100%)";
 
-                spans[random].style.filter = "brightness(10%)";
+                }, 10);
+                setInterval(function () {
 
-            }, 50);
+                    spans[randomName].style.filter = "brightness(10%)";
+
+                }, 100);
+            }
+            if(divElementID.id ==="profession"){
+                const elem = divElementID;
+                elem.innerHTML = spanIt(elem.innerText);
+                // now each letter
+                var spans = elem.querySelectorAll(".random_javascript");
+                random = Math.floor(Math.random() * (spans.length - 1));
+
+                setInterval(function () {
+                    spans[random].style.filter = "brightness(100%)";
+
+                }, 10);
+                setInterval(function () {
+
+                    spans[random].style.filter = "brightness(10%)";
+
+                }, 100);
+            }
 
 
-        }, 1000);
+
+
 
 
     }

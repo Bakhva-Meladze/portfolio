@@ -28,14 +28,10 @@ arrayOfButtonClass.forEach((value,key) =>{
 addEventListener("scroll",function(){
     console.log(Math.floor(window.scrollY));
 });
-
- let state = {
-     i: 0,
-     num: 1000,
-     test: "hi"
- }
-
-domManipulation.changeTextTimeInterval(document.getElementById("profession"));
+setInterval(function () {
+    domManipulation.changeTextTimeInterval(document.getElementById("profession"));
+    domManipulation.changeTextTimeInterval(document.getElementById("name"));
+},1000);
 
 
 
