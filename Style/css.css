@@ -30,16 +30,15 @@
   align-items: center;
   text-decoration: inherit;
   text-align: center;
-  text-shadow: 1px 1px 1px #ff9a3c;
-  box-shadow: 1px 2px 3px darkgrey;
   href: inherit;
   padding-top: 10px;
+  font-family: "h Huddle Stone", sans-serif;
 }
 .head .button:hover,
 .head .button:active {
   transition: 1s ease-in-out;
   background: #4F95DA;
-  color: hsl(227, 10%, 10%);
+  color: white;
   box-shadow: 2px 40px 100px #3498db;
 }
 
@@ -53,7 +52,7 @@
   opacity: 3;
   width: 90%;
   text-align: center;
-  margin-top: 300px;
+  margin-top: 350px;
 }
 .aboutMe .title {
   /* animation properties */
@@ -338,15 +337,17 @@ html body .word .numeric {
   font-size: 50px;
   width: auto;
   color: red;
-  text-shadow: 5px 2px 1px red;
+  text-shadow: 5px 2px 1px darkblue;
   filter: brightness(100%);
+  font-family: "h Huddle Stone", sans-serif;
 }
 html body .word .name {
   font-size: 30px;
   width: auto;
-  color: red;
-  text-shadow: 1px 2px 1px red;
+  color: rgb(255, 0, 0);
+  text-shadow: 1px 2px 1px darkblue;
   filter: brightness(100%);
+  font-family: "h Huddle Stone", sans-serif;
 }
 html body .containers {
   margin-left: 50px;

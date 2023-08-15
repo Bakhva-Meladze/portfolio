@@ -26,17 +26,17 @@
     align-items: center;
     text-decoration: inherit;
     text-align: center;
-    text-shadow: 1px 1px 1px #ff9a3c;
-    box-shadow: 1px 2px 3px  darkgrey;
     href: inherit;
     padding-top: 10px;
+    font-family: 'h Huddle Stone', sans-serif;
+
   }
 
   .button:hover,
   .button:active {
     transition: 1s ease-in-out;
     background: #4F95DA;
-    color: hsl(227, 10%, 10%);
+    color: white;
     box-shadow: 2px 40px 100px #3498db ;
 
   }

@@ -1,8 +1,7 @@
 import {buttonText} from "./translateText.js";
-import {arrayOfButtonClass,arrayOfDivs} from "./attributes.js";
+import {arrayOfButtonClass,arrayOfDivs,stateOfScroll} from "./attributes.js";
 import  domManipulation from "./domManipulation.js";
 
-console.log(domManipulation);
 
 
 
@@ -23,35 +22,24 @@ selectLanguage.addEventListener('click',function(e){
 });
 arrayOfButtonClass.forEach((value,key) =>{
     document.getElementById(value).addEventListener("click",function(){
-/*
-        const classes = new domManipulation();
-*/
          domManipulation.changeScrollLight(document.getElementById(arrayOfDivs[key]));
-/*
-        classes.changeScrollLight(document.getElementById(arrayOfDivs[key]));
-*/
     });
 });
-
 addEventListener("scroll",function(){
     console.log(Math.floor(window.scrollY));
 });
 
- let state ={
-     i:0,
-     num:1000,
+ let state = {
+     i: 0,
+     num: 1000,
      test: "hi"
  }
 
- if(state.i >2){
-     state.num =10;
- }
+domManipulation.changeTextTimeInterval(document.getElementById("profession"));
 
-function span_it(str) {
-    return str.split("").map(letter => "<span class='random_javascript'>" + letter + "</span>").join("")
-}
-let random = 0;
-setInterval(function () {
+
+
+/*setInterval(function () {
 
         if(state.i % 2 ===0) {
             const elem = document.getElementById("profession");
@@ -66,19 +54,16 @@ setInterval(function () {
                 spans[random].style.filter = "brightness(100%)";
 
 
-            }, 100);
+            }, 10);
         }
         if(state.i % 2 !==0) {
             const elem = document.getElementById("profession");
-            setTimeout(function(){
 
-
-            },10);
 
             var spans = elem.querySelectorAll(".random_javascript");
             setInterval(function(){
                 spans[random].style.filter = "brightness(10%)";
-            }, 100);
+            }, 1);
 
         }
         state.i++;
@@ -87,10 +72,6 @@ setInterval(function () {
         }
 
 
-}, 1000);
-
-console.log(state.test);
-state.test = "hop change";
-console.log(state.test);
+}, 1000);*/
 
 
