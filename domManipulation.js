@@ -34,7 +34,7 @@ class domManipulation {
                     spans[random].style.filter = "brightness(100%)";
                 }
                 spans[random].style.filter = "brightness(10%)";
-            }, 10);
+            }, 100);
 
             setInterval(function () {
                 if(that.state.i % 2 !==0) {
@@ -42,7 +42,7 @@ class domManipulation {
                 }
                 spans[random].style.filter = "brightness(100%)";
 
-            }, 10);
+            }, 100);
 
 
             that.state.i++;
