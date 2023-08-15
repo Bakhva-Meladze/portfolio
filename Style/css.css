@@ -5,6 +5,7 @@
 @import url("https://fonts.cdnfonts.com/css/georgia");
 .head {
   position: fixed;
+  z-index: 1;
   width: 90%;
   height: 100px;
   display: flex;
@@ -17,7 +18,7 @@
   color: #001D32;
   transition: background-color 1s ease-out 100ms, opacity 1s ease-out 100ms;
   opacity: 0.8;
-  margin-top: 50px;
+  top: 1px;
 }
 .head .button {
   width: 180px;
@@ -53,7 +54,7 @@
   opacity: 3;
   width: 90%;
   text-align: center;
-  margin-top: 350px;
+  margin-top: 100px;
 }
 .aboutMe .title {
   /* animation properties */
@@ -333,20 +334,22 @@ html body .word {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  margin-top: 150px;
 }
 html body .word .numeric {
-  font-size: 50px;
+  font-size: 100px;
   width: auto;
-  color: yellow;
+  color: #ffcc00;
   text-shadow: 5px 2px 1px darkblue;
   filter: brightness(100%);
   font-family: "h Huddle Stone", sans-serif;
 }
 html body .word .name {
-  font-size: 30px;
+  font-size: 100px;
   width: auto;
-  color: rgb(255, 0, 0);
+  color: #ffcc00;
   text-shadow: 1px 2px 1px darkblue;
+  font-family: "h Huddle Stone", sans-serif;
   filter: brightness(100%);
 }
 html body .containers {

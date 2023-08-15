@@ -21,34 +21,23 @@ class domManipulation {
     changeTextTimeInterval (divElementID) {
         const that=this;
         setInterval(function () {
-
             const elem = divElementID;
             elem.innerHTML = that.spanIt(elem.innerText);
             // now each letter
             var spans = elem.querySelectorAll(".random_javascript");
-
             random = Math.floor(Math.random() * (spans.length - 1));
-            setInterval(function () {
-
-                if(that.state.i % 2 ===0) {
-                    spans[random].style.filter = "brightness(100%)";
-                }
-                spans[random].style.filter = "brightness(10%)";
-            }, 100);
 
             setInterval(function () {
-                if(that.state.i % 2 !==0) {
-                    spans[random].style.filter = "brightness(10%)";
-                }
                 spans[random].style.filter = "brightness(100%)";
 
-            }, 100);
+            }, 5);
+            setInterval(function () {
+
+                spans[random].style.filter = "brightness(10%)";
+
+            }, 50);
 
 
-            that.state.i++;
-            if(that.state.i === 3){
-                that.state.i=0;
-            }
         }, 1000);
 
 
