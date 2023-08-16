@@ -29,8 +29,16 @@ addEventListener("scroll",function(){
     console.log(Math.floor(window.scrollY));
 });
 setInterval(function () {
-    domManipulation.changeTextTimeInterval(document.getElementById("profession"),0);
-    domManipulation.changeTextTimeInterval(document.getElementById("name"),0);
+    domManipulation.changeTextTimeInterval(document.getElementById("profession"),100,10);
+    domManipulation.changeTextTimeInterval(document.getElementById("name"),100,10);
+    domManipulation.changeTextTimeInterval(document.getElementById("buttonAboutMe"),10,100);
+    domManipulation.changeTextTimeInterval(document.getElementById("buttonMySkills"),10,100);
+    domManipulation.changeTextTimeInterval(document.getElementById("buttonContact"),10,100);
+    domManipulation.changeTextTimeInterval(document.getElementById("myProjects"),10,100);
+
+
+
+
 },1000);
 
 

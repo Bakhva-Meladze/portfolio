@@ -16,29 +16,28 @@
   top:1px;
 
   .button {
-    width: 180px;
-    height: 60px;
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid #91C9FF;
+    width: auto;
+    background: none;
+    border: none;
     outline: none;
+    height: auto;
+    cursor: pointer;
     transition: 1s ease-in-out;
-    color: #ffffff;
+    color:  #ffcc00;
     align-items: center;
+    font-size: 30px;
     text-decoration: inherit;
     text-align: center;
-    href: inherit;
-    padding-top: 10px;
     font-family: 'h Huddle Stone', sans-serif;
 
   }
 
   .button:hover,
   .button:active {
-    transition: 1s ease-in-out;
-    background: #4F95DA;
-    color: white;
-    box-shadow: 2px 40px 100px #3498db ;
+    border-radius: 50px;
+    background: #ffcc00;
+    color: #001D32;
+    box-shadow: 2px 40px 100px #ffcc00;
 
   }
 

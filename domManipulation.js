@@ -11,25 +11,45 @@ class domManipulation {
     constructor(props) {
         this.state = {
             i: 0,
-            scrollNumber: 250
+            scrollNumber: 250,
+            array: ["name","profession","buttonAboutMe","buttonMySkills","buttonContact","myProjects"]
         }
         this.changeScrollLight = this.changeScrollLight.bind(this);
 
     }
 
 
-    changeTextTimeInterval = (divElementID) => {
+    changeTextTimeInterval = (divElementID,light,lightOff) => {
         const that = this;
         const arr = ["name", "profession"];
         function spanIt(str) {
             return str.split("").map(letter => "<span class='random_javascript'>" + letter + "</span>").join("");
         }
 
-        arr.forEach(function (value, key) {
+        this.state.array.forEach(function (value, key) {
+            console.log(value);
+            if (divElementID.id === value) {
+                let random = 0;
+                const elem = divElementID;
+                elem.innerHTML = spanIt(elem.innerText);
+                // now each letter
+                var spans = elem.querySelectorAll(".random_javascript");
+                random = Math.floor(Math.random() * (spans.length - 1));
+
+                setInterval(function () {
+                    spans[random].style.filter = "brightness(100%)";
+
+                }, light);
+                setInterval(function () {
+
+                    spans[random].style.filter = "brightness(10%)";
+
+                }, lightOff);
+            }
 
         });
-        if (divElementID.id === "name") {
-            let random = 0;
+
+      /*  if (divElementID.id === "profession") {
             const elem = divElementID;
             elem.innerHTML = spanIt(elem.innerText);
             // now each letter
@@ -45,24 +65,7 @@ class domManipulation {
                 spans[random].style.filter = "brightness(10%)";
 
             }, 100);
-        }
-        if (divElementID.id === "profession") {
-            const elem = divElementID;
-            elem.innerHTML = spanIt(elem.innerText);
-            // now each letter
-            var spans = elem.querySelectorAll(".random_javascript");
-            random = Math.floor(Math.random() * (spans.length - 1));
-
-            setInterval(function () {
-                spans[random].style.filter = "brightness(100%)";
-
-            }, 10);
-            setInterval(function () {
-
-                spans[random].style.filter = "brightness(10%)";
-
-            }, 100);
-        }
+        }*/
     }
 
     changeScrollLight(divElementID) {
