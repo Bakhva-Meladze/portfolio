@@ -18,55 +18,54 @@ class domManipulation {
     }
 
 
-    changeTextTimeInterval= (divElementID)=> {
-        const that=this;
-        function spanIt (str){
+    changeTextTimeInterval = (divElementID) => {
+        const that = this;
+        const arr = ["name", "profession"];
+        function spanIt(str) {
             return str.split("").map(letter => "<span class='random_javascript'>" + letter + "</span>").join("");
         }
-            if(divElementID.id ==="name"){
 
-                const elem = divElementID;
-                elem.innerHTML = spanIt(elem.innerText);
-                // now each letter
-                var spans = elem.querySelectorAll(".random_javascript");
-                randomName = Math.floor(Math.random() * (spans.length - 1));
+        arr.forEach(function (value, key) {
 
-                setInterval(function () {
-                    spans[randomName].style.filter = "brightness(100%)";
+        });
+        if (divElementID.id === "name") {
+            let random = 0;
+            const elem = divElementID;
+            elem.innerHTML = spanIt(elem.innerText);
+            // now each letter
+            var spans = elem.querySelectorAll(".random_javascript");
+            random = Math.floor(Math.random() * (spans.length - 1));
 
-                }, 10);
-                setInterval(function () {
+            setInterval(function () {
+                spans[random].style.filter = "brightness(100%)";
 
-                    spans[randomName].style.filter = "brightness(10%)";
+            }, 10);
+            setInterval(function () {
 
-                }, 100);
-            }
-            if(divElementID.id ==="profession"){
-                const elem = divElementID;
-                elem.innerHTML = spanIt(elem.innerText);
-                // now each letter
-                var spans = elem.querySelectorAll(".random_javascript");
-                random = Math.floor(Math.random() * (spans.length - 1));
+                spans[random].style.filter = "brightness(10%)";
 
-                setInterval(function () {
-                    spans[random].style.filter = "brightness(100%)";
+            }, 100);
+        }
+        if (divElementID.id === "profession") {
+            const elem = divElementID;
+            elem.innerHTML = spanIt(elem.innerText);
+            // now each letter
+            var spans = elem.querySelectorAll(".random_javascript");
+            random = Math.floor(Math.random() * (spans.length - 1));
 
-                }, 10);
-                setInterval(function () {
+            setInterval(function () {
+                spans[random].style.filter = "brightness(100%)";
 
-                    spans[random].style.filter = "brightness(10%)";
+            }, 10);
+            setInterval(function () {
 
-                }, 100);
-            }
+                spans[random].style.filter = "brightness(10%)";
 
-
-
-
-
-
+            }, 100);
+        }
     }
 
-    changeScrollLight(divElementID){
+    changeScrollLight(divElementID) {
 
         let scroll = Math.floor(window.scrollY);
         let result = 0;
@@ -85,18 +84,18 @@ class domManipulation {
             console.log(result);
         }
         divElementID.id === "aboutMe" ?
-            document.getElementById("aboutMe").style.boxShadow = "2px 40px 100px #3498db" :
+            document.getElementById("aboutMe").style.boxShadow = "40px 40px 100px #ffcc00" :
             document.getElementById("aboutMe").style.boxShadow = "0px 0px 0px";
 
         divElementID.id === "mySkills" ?
-            document.getElementById("mySkills").style.boxShadow = "2px 40px 100px #3498db" :
+            document.getElementById("mySkills").style.boxShadow = "40px 40px 100px #ffcc00" :
             document.getElementById("mySkills").style.boxShadow = "0px 0px 0px";
 
         divElementID.id === "address" ?
-            document.getElementById("address").style.boxShadow = "2px 40px 100px #3498db" :
+            document.getElementById("address").style.boxShadow = "40px 40px 100px #ffcc00" :
             document.getElementById("address").style.boxShadow = "0px 0px 0px";
         divElementID.id === "myProject" ?
-            document.getElementById("myProject").style.boxShadow = "2px 40px 100px #3498db" :
+            document.getElementById("myProject").style.boxShadow = "40px 40px 100px #ffcc00" :
             document.getElementById("myProject").style.boxShadow = "0px 0px 0px";
         window.scrollBy(0, result);
     }

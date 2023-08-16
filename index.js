@@ -29,8 +29,8 @@ addEventListener("scroll",function(){
     console.log(Math.floor(window.scrollY));
 });
 setInterval(function () {
-    domManipulation.changeTextTimeInterval(document.getElementById("profession"));
-    domManipulation.changeTextTimeInterval(document.getElementById("name"));
+    domManipulation.changeTextTimeInterval(document.getElementById("profession"),0);
+    domManipulation.changeTextTimeInterval(document.getElementById("name"),0);
 },1000);
 
 

@@ -21,27 +21,26 @@
   top: 1px;
 }
 .head .button {
-  width: 180px;
-  height: 60px;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #91C9FF;
+  width: auto;
+  background: none;
+  border: none;
   outline: none;
+  height: auto;
+  cursor: pointer;
   transition: 1s ease-in-out;
-  color: #ffffff;
+  color: #ffcc00;
   align-items: center;
+  font-size: 30px;
   text-decoration: inherit;
   text-align: center;
-  href: inherit;
-  padding-top: 10px;
   font-family: "h Huddle Stone", sans-serif;
 }
 .head .button:hover,
 .head .button:active {
-  transition: 1s ease-in-out;
-  background: #4F95DA;
-  color: white;
-  box-shadow: 2px 40px 100px #3498db;
+  border-radius: 50px;
+  background: #ffcc00;
+  color: #001D32;
+  box-shadow: 2px 40px 100px #ffcc00;
 }
 
 .head:hover,
@@ -58,11 +57,11 @@
 }
 .aboutMe .title {
   /* animation properties */
+  color: #ffcc00;
   opacity: 2;
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  color: rgb(203, 229, 255);
   font-family: "Freedom45", sans-serif;
   -moz-animation: my-animation 15s linear infinite;
   -webkit-animation: my-animation 15s linear infinite;
@@ -92,7 +91,7 @@
    height: 400px;
    opacity: 3;
    width: 90%;*/
-  box-shadow: 2px 40px 100px #3498db;
+  box-shadow: 2px 40px 100px #ffcc00;
 }
 
 .mySkills {
@@ -105,7 +104,7 @@
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  color: red;
+  color: #ffcc00;
   font-family: "Freedom45", sans-serif;
   -moz-animation: my-animation 15s linear infinite;
   -webkit-animation: my-animation 15s linear infinite;
@@ -192,7 +191,7 @@
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  color: #ffffff;
+  color: #ffcc00;
   font-family: "Freedom45", sans-serif;
   -moz-animation: my-animation 15s linear infinite;
   -webkit-animation: my-animation 15s linear infinite;
@@ -250,7 +249,7 @@
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  color: #ffffff;
+  color: #ffcc00;
   font-family: "Freedom45", sans-serif;
   -moz-animation: my-animation 15s linear infinite;
   -webkit-animation: my-animation 15s linear infinite;
@@ -356,7 +355,6 @@ html body .containers {
   margin-left: 50px;
   background-color: #001D32;
   color: rgb(203, 229, 255);
-  border: 2px solid #3498db; /* Border color and style */
   border-radius: 8px; /* Rounded corners */
   overflow: hidden;
   padding-top: 5px;

@@ -8,11 +8,11 @@
 
   .title{
     /* animation properties */
+    color: #ffcc00;
     opacity: 2;
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    color: rgb(203, 229, 255);
     font-family: 'Freedom45', sans-serif;
     -moz-animation: my-animation 15s linear infinite;
     -webkit-animation: my-animation 15s linear infinite;
@@ -44,7 +44,7 @@
   height: 400px;
   opacity: 3;
   width: 90%;*/
-  box-shadow: 2px 40px 100px #3498db ;
+  box-shadow: 2px 40px 100px #ffcc00;
 
 
 }
