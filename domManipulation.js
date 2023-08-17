@@ -41,10 +41,10 @@ class domManipulation {
 
                 }, light);
                 setInterval(function () {
-
                     spans[random].style.filter = "brightness(10%)";
 
                 }, lightOff);
+
             }
 
         });
