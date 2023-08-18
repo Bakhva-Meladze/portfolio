@@ -13,9 +13,8 @@ selectLanguage.addEventListener("click", function(e){
     filter === true ?container.style.display = "block":container.style.display = "none";
     filter = !filter;
     document.querySelector("#geo").addEventListener("click",function (e){
-        console.log("Geo");
-
-    })
+        document.querySelector("#target").innerHTML = "<img src=\"images/georgia-flag-icon.png\">Geo</div>"
+    });
 })
 
 selectLanguage.addEventListener('click',function(e){

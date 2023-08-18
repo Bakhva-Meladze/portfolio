@@ -15,6 +15,19 @@
   opacity: 0.8;
   top:1px;
 
+  #target{
+    width: auto;
+    length: auto;
+    color: white;
+    text-decoration: inherit;
+    text-align: center;
+    font-family: 'h Huddle Stone', sans-serif;
+    img {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
   .selector{
     width: auto;
     background: none;
@@ -29,10 +42,6 @@
     text-decoration: inherit;
     text-align: center;
     font-family: 'h Huddle Stone', sans-serif;
-
-
-
-
 
   }
   .container{
