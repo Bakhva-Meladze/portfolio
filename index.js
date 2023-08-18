@@ -7,6 +7,10 @@ const contactButton = document.querySelector("#buttonContact");
 const buttonProjects = document.querySelector("#myProjects");
 const selectLanguage = document.querySelector("#language");
 
+selectLanguage.addEventListener("click", function(){
+
+})
+
 selectLanguage.addEventListener('click',function(e){
     let i =0;
     e.target.value ==="Eng"? i=0:i=1;
@@ -32,7 +36,6 @@ setInterval(function () {
     domManipulation.changeTextTimeInterval(document.getElementById("buttonMySkills"),10,100);
     domManipulation.changeTextTimeInterval(document.getElementById("buttonContact"),10,100);
     domManipulation.changeTextTimeInterval(document.getElementById("myProjects"),10,100);
-
 },1000);
 
 

@@ -1,16 +1,7 @@
 
-let random = 0;
-let randomName =0;
-let state = {
-    i: 0,
-    num: 1000,
-    test: "hi"
-}
 class domManipulation {
-
     constructor(props) {
         this.state = {
-            i: 0,
             scrollNumber: 250,
             array: []
         }

@@ -20,6 +20,21 @@
   opacity: 0.8;
   top: 1px;
 }
+.head .geo {
+  width: 10px;
+  height: 10px;
+  background: red;
+}
+.head .divGeo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  height: auto;
+}
+.head .divGeo img {
+  width: 30px;
+  height: 30px;
+}
 .head .button {
   width: auto;
   background: none;
