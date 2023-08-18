@@ -21,8 +21,6 @@ class domManipulation {
 
     arrayFunction (array) {
         this.state.array = array;
-        return array
-
     }
 
     changeTextTimeInterval = (divElementID,light,lightOff) => {
@@ -30,7 +28,6 @@ class domManipulation {
         function spanIt(str) {
             return str.split("").map(letter => "<span class='random_javascript'>" + letter + "</span>").join("");
         }
-
         this.state.array.forEach(function (value, key) {
             if (divElementID.id === value) {
                 let random = 0;
@@ -46,47 +43,23 @@ class domManipulation {
                     spans[random].style.filter = "brightness(10%)";
 
                 }, lightOff);
-
             }
-
         });
-
-      /*  if (divElementID.id === "profession") {
-            const elem = divElementID;
-            elem.innerHTML = spanIt(elem.innerText);
-            // now each letter
-            var spans = elem.querySelectorAll(".random_javascript");
-            random = Math.floor(Math.random() * (spans.length - 1));
-
-            setInterval(function () {
-                spans[random].style.filter = "brightness(100%)";
-
-            }, 10);
-            setInterval(function () {
-
-                spans[random].style.filter = "brightness(10%)";
-
-            }, 100);
-        }*/
     }
 
     changeScrollLight(divElementID) {
-
         let scroll = Math.floor(window.scrollY);
         let result = 0;
         let scrollheight = divElementID.offsetTop - this.state.scrollNumber;
         let k = scroll - scrollheight;
         let t = scrollheight - scroll;
-        console.log(scrollheight);
 
 
         if (scroll > scrollheight) {
             result = -k;
-            console.log(result);
         }
         if (scroll < scrollheight) {
             result = (scroll - scroll) + t;
-            console.log(result);
         }
         divElementID.id === "aboutMe" ?
             document.getElementById("aboutMe").style.boxShadow = "40px 40px 100px #ffcc00" :

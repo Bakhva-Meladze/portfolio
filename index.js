@@ -1,10 +1,6 @@
 import {buttonText} from "./translateText.js";
 import {arrayOfButtonClass,arrayOfDivs,stateOfScroll,arrayOfTextId} from "./attributes.js";
 import  domManipulation from "./domManipulation.js";
-
-
-
-
 const buttonAboutMe = document.querySelector("#buttonAboutMe");
 const buttonSkill = document.querySelector("#buttonMySkills");
 const contactButton = document.querySelector("#buttonContact");
