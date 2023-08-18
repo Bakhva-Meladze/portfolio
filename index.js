@@ -6,9 +6,16 @@ const buttonSkill = document.querySelector("#buttonMySkills");
 const contactButton = document.querySelector("#buttonContact");
 const buttonProjects = document.querySelector("#myProjects");
 const selectLanguage = document.querySelector("#language");
+const container = document.querySelector("#container");
+let filter = true;
 
-selectLanguage.addEventListener("click", function(){
+selectLanguage.addEventListener("click", function(e){
+    filter === true ?container.style.display = "block":container.style.display = "none";
+    filter = !filter;
+    document.querySelector("#geo").addEventListener("click",function (e){
+        console.log("Geo");
 
+    })
 })
 
 selectLanguage.addEventListener('click',function(e){
