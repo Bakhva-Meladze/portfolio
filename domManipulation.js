@@ -12,22 +12,26 @@ class domManipulation {
         this.state = {
             i: 0,
             scrollNumber: 250,
-            array: ["name","profession","buttonAboutMe","buttonMySkills","buttonContact","myProjects"]
+            array: []
         }
+        this.arrayFunction();
         this.changeScrollLight = this.changeScrollLight.bind(this);
 
     }
 
+    arrayFunction (array) {
+        this.state.array = array;
+        return array
+
+    }
 
     changeTextTimeInterval = (divElementID,light,lightOff) => {
         const that = this;
-        const arr = ["name", "profession"];
         function spanIt(str) {
             return str.split("").map(letter => "<span class='random_javascript'>" + letter + "</span>").join("");
         }
 
         this.state.array.forEach(function (value, key) {
-            console.log(value);
             if (divElementID.id === value) {
                 let random = 0;
                 const elem = divElementID;
@@ -35,10 +39,8 @@ class domManipulation {
                 // now each letter
                 var spans = elem.querySelectorAll(".random_javascript");
                 random = Math.floor(Math.random() * (spans.length - 1));
-
                 setInterval(function () {
                     spans[random].style.filter = "brightness(100%)";
-
                 }, light);
                 setInterval(function () {
                     spans[random].style.filter = "brightness(10%)";

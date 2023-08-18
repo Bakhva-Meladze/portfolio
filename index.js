@@ -1,5 +1,5 @@
 import {buttonText} from "./translateText.js";
-import {arrayOfButtonClass,arrayOfDivs,stateOfScroll} from "./attributes.js";
+import {arrayOfButtonClass,arrayOfDivs,stateOfScroll,arrayOfTextId} from "./attributes.js";
 import  domManipulation from "./domManipulation.js";
 
 
@@ -28,6 +28,7 @@ arrayOfButtonClass.forEach((value,key) =>{
 addEventListener("scroll",function(){
     console.log(Math.floor(window.scrollY));
 });
+domManipulation.arrayFunction(arrayOfTextId);
 setInterval(function () {
     domManipulation.changeTextTimeInterval(document.getElementById("profession"),100,99);
     domManipulation.changeTextTimeInterval(document.getElementById("name"),100,99);
