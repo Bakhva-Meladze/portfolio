@@ -18,13 +18,13 @@ html {
     color: #001D32;
     .word {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: nowrap;
-      justify-content: flex-start;
-      margin-top:150px;
+      justify-content: flex-end;
+      margin-top: 150px;
 
       .numeric {
-        font-size: 100px;
+        font-size: 40px;
         width: auto;
         color:  #ffcc00;
         text-shadow: 5px 2px 1px darkblue;
@@ -34,7 +34,7 @@ html {
 
       }
       .name {
-        font-size: 100px;
+        font-size: 30px;
         width: auto;
         color: #ffcc00;
         text-shadow: 1px 2px 1px darkblue;

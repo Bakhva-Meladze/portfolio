@@ -371,13 +371,13 @@ html body {
 }
 html body .word {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin-top: 150px;
 }
 html body .word .numeric {
-  font-size: 100px;
+  font-size: 40px;
   width: auto;
   color: #ffcc00;
   text-shadow: 5px 2px 1px darkblue;
@@ -385,7 +385,7 @@ html body .word .numeric {
   font-family: "h Huddle Stone", sans-serif;
 }
 html body .word .name {
-  font-size: 100px;
+  font-size: 30px;
   width: auto;
   color: #ffcc00;
   text-shadow: 1px 2px 1px darkblue;
