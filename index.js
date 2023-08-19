@@ -12,10 +12,13 @@ let filter = true;
 selectLanguage.addEventListener("click", function(e){
     filter === true ?container.style.display = "block":container.style.display = "none";
     filter = !filter;
-    document.querySelector("#geo").addEventListener("click",function (e){
-        document.querySelector("#target").innerHTML = "<img src=\"images/georgia-flag-icon.png\">Geo</div>"
-    });
-})
+});
+document.querySelector("#geo").addEventListener("click",function (e){
+    document.querySelector("#target").innerHTML = "<img src=\"images/georgia-flag-icon.png\">Geo</div>"
+});
+document.querySelector("#eng").addEventListener("click",function (e){
+    document.querySelector("#target").innerHTML = "<img src=\"images/pngwing.com%20(1).png\">Eng</div>"
+});
 
 selectLanguage.addEventListener('click',function(e){
     let i =0;
