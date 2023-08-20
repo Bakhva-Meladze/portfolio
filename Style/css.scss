@@ -16,34 +16,7 @@ html {
   body {
     background-color: #021F23;
     color: #001D32;
-    .word {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
-      margin-top: 150px;
 
-      .numeric {
-        font-size: 40px;
-        width: auto;
-        color:  #ffcc00;
-        text-shadow: 5px 2px 1px darkblue;
-        filter: brightness(100%);
-        font-family: 'h Huddle Stone', sans-serif;
-
-
-      }
-      .name {
-        font-size: 30px;
-        width: auto;
-        color: #ffcc00;
-        text-shadow: 1px 2px 1px darkblue;
-        font-family: 'h Huddle Stone', sans-serif;
-        filter: brightness(100%);
-
-
-      }
-    }
 
     .containers {
 
