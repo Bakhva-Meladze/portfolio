@@ -14,12 +14,12 @@
   transition: background-color 1s ease-out 100ms, opacity 1s ease-out 100ms;
   opacity: 0.8;
   top:1px;
+
   .word {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    margin-top: 150px;
 
     .numeric {
       font-size: 40px;
