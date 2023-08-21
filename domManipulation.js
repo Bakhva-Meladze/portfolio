@@ -45,7 +45,6 @@ class domManipulation {
         let k = scroll - scrollheight;
         let t = scrollheight - scroll;
 
-
         if (scroll > scrollheight) {
             result = -k;
         }

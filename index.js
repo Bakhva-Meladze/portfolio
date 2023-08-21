@@ -9,8 +9,8 @@ const selectLanguage = document.querySelector("#language");
 const container = document.querySelector("#container");
 let filter = true;
 
-const arr = [`<img src="images/georgia-flag-icon.png">Geo</div>`, `<img src=\"images/pngwing.com%20(1).png\">Eng</div>`];
-document.querySelector("#target").innerHTML = arr[0];
+const arr = [`<img src="images/georgia-flag-icon.png">Geo</div>`,`<img src=\"images/pngwing.com%20(1).png\">Eng</div>`];
+document.querySelector("#target").innerHTML = arr[1];
 
 selectLanguage.addEventListener("click", function(e){
     filter === true ?container.style.display = "block":container.style.display = "none";
@@ -23,7 +23,6 @@ selectLanguage.addEventListener("click", function(e){
 document.querySelector("#geo").addEventListener("click",function (e){
     document.querySelector("#target").innerHTML = arr[0];
     localStorage.setItem("id",1);
-    console.log(localStorage.getItem("id"));
     State.id = localStorage.getItem("id");
     buttonAboutMe.innerHTML =buttonText.aboutMe[State.id];
     buttonSkill.innerHTML =buttonText.mySkills[State.id];
@@ -63,48 +62,11 @@ domManipulation.arrayFunction(arrayOfTextId);
 setInterval(function () {
     domManipulation.changeTextTimeInterval(document.getElementById("profession"),100,99);
     domManipulation.changeTextTimeInterval(document.getElementById("name"),100,99);
-    domManipulation.changeTextTimeInterval(document.getElementById("buttonAboutMe"),10,100);
-    domManipulation.changeTextTimeInterval(document.getElementById("buttonMySkills"),10,100);
-    domManipulation.changeTextTimeInterval(document.getElementById("buttonContact"),10,100);
-    domManipulation.changeTextTimeInterval(document.getElementById("myProjects"),10,100);
+
 },1000);
 
 
 
 
-/*setInterval(function () {
-
-        if(state.i % 2 ===0) {
-            const elem = document.getElementById("profession");
-            elem.innerHTML = span_it(elem.innerText);
-            // now each letter
-            var spans = elem.querySelectorAll(".random_javascript");
-
-            console.log("spans length: " + spans.length);
-
-            random = Math.floor(Math.random() * (spans.length - 1));
-            setInterval(function(){
-                spans[random].style.filter = "brightness(100%)";
-
-
-            }, 10);
-        }
-        if(state.i % 2 !==0) {
-            const elem = document.getElementById("profession");
-
-
-            var spans = elem.querySelectorAll(".random_javascript");
-            setInterval(function(){
-                spans[random].style.filter = "brightness(10%)";
-            }, 1);
-
-        }
-        state.i++;
-        if(state.i === 3){
-            state.i=0;
-        }
-
-
-}, 1000);*/
 
 
