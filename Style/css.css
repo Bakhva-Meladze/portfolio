@@ -6,7 +6,7 @@
 .head {
   position: fixed;
   z-index: 1;
-  width: 90%;
+  width: 95%;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -84,7 +84,7 @@
   height: 10px;
 }
 .head .button {
-  width: auto;
+  width: 100px;
   background: none;
   border: none;
   outline: none;
@@ -97,6 +97,21 @@
   text-decoration: inherit;
   text-align: center;
   font-family: "h Huddle Stone", sans-serif;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.head .translate {
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.head .translate .container {
+  width: auto;
+  height: auto;
+  background: #001D32;
+  border: 1px silver solid;
+  border-radius: 5px;
 }
 .head .button:hover,
 .head .button:active {

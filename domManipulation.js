@@ -10,6 +10,11 @@ class domManipulation {
 
     }
 
+    changeTranslateMenu () {
+        alert("hi");
+
+    }
+
     arrayFunction (array) {
         this.state.array = array;
     }

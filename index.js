@@ -9,7 +9,8 @@ const selectLanguage = document.querySelector("#language");
 const container = document.querySelector("#container");
 let filter = true;
 
-const arr = [`<img src="images/georgia-flag-icon.png">Geo</div>`,`<img src=\"images/pngwing.com%20(1).png\">Eng</div>`];
+const arr = [`<div class="divGeo" id="geo"><img src="images/georgia-flag-icon.png">Geo</div>`,
+    `<div class="divGeo" id="eng"><img src="images/pngwing.com%20(1).png">ENG</div>`];
 document.querySelector("#target").innerHTML = arr[1];
 
 selectLanguage.addEventListener("click", function(e){
