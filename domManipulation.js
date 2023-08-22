@@ -1,14 +1,10 @@
 
 import {buttonText,titleText} from "./translateText.js";
 import {htmlAttributesOfTranslate,arrayOfTextId} from "./attributes.js";
+import  {buttonAboutMe,buttonSkill, contactButton,buttonProjects,container,profession,name} from "./selectors.js"
 
-const buttonAboutMe = document.querySelector("#buttonAboutMe");
-const buttonSkill = document.querySelector("#buttonMySkills");
-const contactButton = document.querySelector("#buttonContact");
-const buttonProjects = document.querySelector("#myProjects");
-const container = document.querySelector("#container");
-const profession =document.querySelector("#profession");
-const name = document.querySelector("#name");
+let filter = true;
+
 
 class domManipulation {
     constructor(props) {
@@ -19,10 +15,8 @@ class domManipulation {
         document.querySelector("#target").innerHTML = htmlAttributesOfTranslate[0];
         this.changeScrollLight = this.changeScrollLight.bind(this);
         this.changeTranslateMenu = this.changeTranslateMenu.bind(this);
-
     }
     selectLanguage() {
-        let filter = true;
         filter === true ?container.style.display = "block":container.style.display = "none";
         filter = !filter;
     }
