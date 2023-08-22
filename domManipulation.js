@@ -1,18 +1,29 @@
 
+import {buttonText} from "./translateText.js";
+
+const buttonAboutMe = document.querySelector("#buttonAboutMe");
+const buttonSkill = document.querySelector("#buttonMySkills");
+const contactButton = document.querySelector("#buttonContact");
+const buttonProjects = document.querySelector("#myProjects");
 class domManipulation {
     constructor(props) {
         this.state = {
             scrollNumber: 250,
-            array: []
+            array: [],
+            id: localStorage.getItem("id")? localStorage.getItem("id"):0
         }
         this.arrayFunction();
         this.changeScrollLight = this.changeScrollLight.bind(this);
+        this.changeTranslateMenu = this.changeTranslateMenu.bind(this);
 
     }
 
-    changeTranslateMenu () {
-        alert("hi");
-
+    changeTranslateMenu (key,htmlAttribute) {
+        document.querySelector("#target").innerHTML = htmlAttribute[key];
+        buttonAboutMe.innerHTML =buttonText.aboutMe[key];
+        buttonSkill.innerHTML =buttonText.mySkills[key];
+        contactButton.innerHTML =buttonText.myContact[key];
+        buttonProjects.innerHTML =buttonText.myProjects[key];
     }
 
     arrayFunction (array) {

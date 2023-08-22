@@ -9,44 +9,50 @@ const selectLanguage = document.querySelector("#language");
 const container = document.querySelector("#container");
 let filter = true;
 
-const arr = [`<div class="divGeo" id="geo"><img src="images/georgia-flag-icon.png">Geo</div>`,
-    `<div class="divGeo" id="eng"><img src="images/pngwing.com%20(1).png">ENG</div>`];
-document.querySelector("#target").innerHTML = arr[1];
+const arr = [
+    `<div class="divGeo"><img src="images/pngwing.com%20(1).png">ENG</div>`,
+    `<div class="divGeo"><img src="images/georgia-flag-icon.png">Geo</div>`,];
+document.querySelector("#target").innerHTML = arr[0];
 
 selectLanguage.addEventListener("click", function(e){
     filter === true ?container.style.display = "block":container.style.display = "none";
     filter = !filter;
 });
 
- let State ={
+/* let State ={
     id: localStorage.getItem("id")?localStorage.getItem("id"):1
-}
-document.querySelector("#geo").addEventListener("click",function (e){
-    document.querySelector("#target").innerHTML = arr[0];
-    localStorage.setItem("id",1);
-    State.id = localStorage.getItem("id");
-    buttonAboutMe.innerHTML =buttonText.aboutMe[State.id];
-    buttonSkill.innerHTML =buttonText.mySkills[State.id];
-    contactButton.innerHTML =buttonText.myContact[State.id];
-    buttonProjects.innerHTML =buttonText.myProjects[State.id];
+}*/
+const id = ["#eng","#geo"];
+document.querySelector("#eng").addEventListener("click",function(e){
+    domManipulation.changeTranslateMenu(0,arr);
+});
+document.querySelector("#geo").addEventListener("click",function(e){
+    domManipulation.changeTranslateMenu(1,arr);
+});
 
-    container.style.display = "none";
+
+
+/*
+document.querySelector("#geo").addEventListener("click",function (e){
+    document.querySelector("#target").innerHTML = arr[1];
+    localStorage.setItem("id",1);
+    buttonAboutMe.innerHTML =buttonText.aboutMe[1];
+    buttonSkill.innerHTML =buttonText.mySkills[1];
+    contactButton.innerHTML =buttonText.myContact[1];
+    buttonProjects.innerHTML =buttonText.myProjects[1];
+
 });
 document.querySelector("#eng").addEventListener("click",function (e){
-    document.querySelector("#target").innerHTML = arr[1];
+    document.querySelector("#target").innerHTML = arr[0];
     localStorage.setItem("id",0);
     container.style.display = "none";
     console.log(localStorage.getItem("id"));
-    State.id = localStorage.getItem("id");
-    buttonAboutMe.innerHTML =buttonText.aboutMe[State.id];
-    buttonSkill.innerHTML =buttonText.mySkills[State.id];
-    contactButton.innerHTML =buttonText.myContact[State.id];
-    buttonProjects.innerHTML =buttonText.myProjects[State.id];
+    buttonAboutMe.innerHTML =buttonText.aboutMe[0];
+    buttonSkill.innerHTML =buttonText.mySkills[0];
+    contactButton.innerHTML =buttonText.myContact[0];
+    buttonProjects.innerHTML =buttonText.myProjects[0];
+});*/
 
-
-});
-console.log(localStorage.getItem("id"));
-console.log(State.id);
 
 
 
