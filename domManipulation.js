@@ -1,14 +1,15 @@
 
-import {buttonText} from "./translateText.js";
-import {htmlAttributesOfTranslate} from "./attributes.js";
-const htmlAttributes = [
-    `<div class="divGeo"><img src="images/pngwing.com%20(1).png">ENG</div>`,
-    `<div class="divGeo"><img src="images/georgia-flag-icon.png">Geo</div>`,];
+import {buttonText,titleText} from "./translateText.js";
+import {htmlAttributesOfTranslate,arrayOfTextId} from "./attributes.js";
 
 const buttonAboutMe = document.querySelector("#buttonAboutMe");
 const buttonSkill = document.querySelector("#buttonMySkills");
 const contactButton = document.querySelector("#buttonContact");
 const buttonProjects = document.querySelector("#myProjects");
+const container = document.querySelector("#container");
+const profession =document.querySelector("#profession");
+const name = document.querySelector("#name");
+
 class domManipulation {
     constructor(props) {
         this.state = {
@@ -16,11 +17,14 @@ class domManipulation {
             array: [],
         }
         document.querySelector("#target").innerHTML = htmlAttributesOfTranslate[0];
-
-        this.arrayFunction();
         this.changeScrollLight = this.changeScrollLight.bind(this);
         this.changeTranslateMenu = this.changeTranslateMenu.bind(this);
 
+    }
+    selectLanguage() {
+        let filter = true;
+        filter === true ?container.style.display = "block":container.style.display = "none";
+        filter = !filter;
     }
     changeTranslateMenu (key) {
         document.querySelector("#target").innerHTML = htmlAttributesOfTranslate[key];
@@ -28,11 +32,10 @@ class domManipulation {
         buttonSkill.innerHTML =buttonText.mySkills[key];
         contactButton.innerHTML =buttonText.myContact[key];
         buttonProjects.innerHTML =buttonText.myProjects[key];
+        profession.innerHTML = titleText.myExperienceName[key];
+        name.innerHTML = titleText.myName[key]
+        container.style.display ="none";
         localStorage.setItem("id",key);
-    }
-
-    arrayFunction (array) {
-        this.state.array = array;
     }
 
     changeTextTimeInterval = (divElementID,light,lightOff) => {
@@ -40,7 +43,7 @@ class domManipulation {
         function spanIt(str) {
             return str.split("").map(letter => "<span class='random_javascript'>" + letter + "</span>").join("");
         }
-        this.state.array.forEach(function (value, key) {
+        arrayOfTextId.forEach(function (value, key) {
             if (divElementID.id === value) {
                 let random = 0;
                 const elem = divElementID;
