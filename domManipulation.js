@@ -1,5 +1,9 @@
 
 import {buttonText} from "./translateText.js";
+import {htmlAttributesOfTranslate} from "./attributes.js";
+const htmlAttributes = [
+    `<div class="divGeo"><img src="images/pngwing.com%20(1).png">ENG</div>`,
+    `<div class="divGeo"><img src="images/georgia-flag-icon.png">Geo</div>`,];
 
 const buttonAboutMe = document.querySelector("#buttonAboutMe");
 const buttonSkill = document.querySelector("#buttonMySkills");
@@ -10,20 +14,21 @@ class domManipulation {
         this.state = {
             scrollNumber: 250,
             array: [],
-            id: localStorage.getItem("id")? localStorage.getItem("id"):0
         }
+        document.querySelector("#target").innerHTML = htmlAttributesOfTranslate[0];
+
         this.arrayFunction();
         this.changeScrollLight = this.changeScrollLight.bind(this);
         this.changeTranslateMenu = this.changeTranslateMenu.bind(this);
 
     }
-
-    changeTranslateMenu (key,htmlAttribute) {
-        document.querySelector("#target").innerHTML = htmlAttribute[key];
+    changeTranslateMenu (key) {
+        document.querySelector("#target").innerHTML = htmlAttributesOfTranslate[key];
         buttonAboutMe.innerHTML =buttonText.aboutMe[key];
         buttonSkill.innerHTML =buttonText.mySkills[key];
         contactButton.innerHTML =buttonText.myContact[key];
         buttonProjects.innerHTML =buttonText.myProjects[key];
+        localStorage.setItem("id",key);
     }
 
     arrayFunction (array) {
