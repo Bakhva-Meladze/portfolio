@@ -2,7 +2,7 @@
  export const buttonText ={
      aboutMe:["about me","ჩემს შესახებ"],
      mySkills:["My skills","ჩემი უნარები"],
-     myContact:["contact","საკონტაქტო"],
+     myContact:["contact","კონტაქტი"],
      myProjects:["My projects", "ჩემი პროექტები"],
 }
 
