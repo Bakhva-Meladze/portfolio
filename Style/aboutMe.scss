@@ -34,20 +34,42 @@
     font-family: 'h Huddle Stone', sans-serif;
 
   }
-  a{
-    background-color: red;
+  .downloadCv{
+    margin-left: 215px;
+    margin-right: 440px;
+    display: flex;
     margin-top: 40px;
-    top:40px;
-    font-family: 'h Huddle Stone', sans-serif;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 
-    img {
-      width: 50px;
-      height: 50px;
+
+
+
+    p{
+      width: 200px;
       margin-top:40px;
-      border-radius: 5px;
-      color: #264de4;
+      background: red;
+      text-align: center;
+      margin-left: 36%;
+      border-bottom: 106px;
+      border-radius: 28px;
+      font-family: 'h Huddle Stone', sans-serif;
+      font-size: 20px
+
     }
+    a{
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        color: #264de4;
+      }
+    }
+
   }
+
+
 }
 
 .containers:hover,
