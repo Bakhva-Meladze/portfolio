@@ -5,4 +5,5 @@ export const arrayOfTextId = ["name","profession","buttonAboutMe","buttonMySkill
 
 export const  htmlAttributesOfTranslate = [
     `<div class="divGeo"><img src="images/pngwing.com%20(1).png">ENG</div>`,
-    `<div class="divGeo"><img src="images/georgia-flag-icon.png">Geo</div>`,];
+    `<div class="divGeo"><img src="images/georgia-flag-icon.png">Geo</div>`,
+];
