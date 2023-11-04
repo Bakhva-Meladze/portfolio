@@ -9,4 +9,6 @@ export const buttonProjects = document.querySelector("#myProjects");
 export const container = document.querySelector("#container");
 export const profession =document.querySelector("#profession");
 export const name = document.querySelector("#name");
+export const chat = document.querySelector("#chatArea");
+export const sendButton = document.querySelector("#send");
 

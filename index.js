@@ -1,6 +1,7 @@
 import {arrayOfButtonClass,arrayOfDivs} from "./attributes.js";
 import  domManipulation from "./domManipulation.js";
 import  "./selectors.js";
+import "./passData.js";
 
 document.querySelector("#language").addEventListener("click", function(e){
     domManipulation.selectLanguage();
