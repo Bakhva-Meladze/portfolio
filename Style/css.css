@@ -425,6 +425,25 @@
   background: color-mix(in srgb, yellow, red 50%);
 }
 
+.chatParrent {
+  margin-top: 100px;
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  z-index: 3;
+  top: 100px;
+}
+.chatParrent .chat {
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  z-index: 3;
+  top: 100px;
+}
+
 html {
   scroll-behavior: smooth;
 }

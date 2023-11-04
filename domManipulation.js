@@ -1,7 +1,7 @@
 
 import {buttonText,titleText} from "./translateText.js";
 import {htmlAttributesOfTranslate,arrayOfTextId} from "./attributes.js";
-import  {buttonAboutMe,buttonSkill, contactButton,buttonProjects,container,profession,name} from "./selectors.js"
+import  {buttonAboutMe,buttonSkill, contactButton,buttonProjects,container,profession,name} from "./selectors.js";
 
 let filter = true;
 
