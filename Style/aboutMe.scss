@@ -1,7 +1,7 @@
 .aboutMe {
-  height: 400px;
+  max-height: 600px;
   opacity: 3;
-  width: 90%;
+  max-width: 90%;
   text-align: center;
   margin-top:200px;
 
@@ -32,20 +32,37 @@
   }
   .cv-text{
     font-family: 'h Huddle Stone', sans-serif;
+    .about{
+      margin-left: 5px;
+      border: 2px solid;
+      border-radius: 5px;
+      max-width: 500px;
+      margin-top:10px;
+      font-size: 15px;
+      background-color: floralwhite;;
+      text-align: left;
+      color: black;
+
+
+
+    }
+
+
+
 
   }
   .downloadCv{
-    margin-left: 215px;
-    margin-right: 440px;
+    right: 5px;
+    margin-left: 192px;
     display: flex;
-    margin-top: 40px;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: flex-end;
 
 
 
     p{
-      width: 200px;
+      max-width: 200px;
       margin-top:40px;
       background: red;
       text-align: center;
@@ -57,11 +74,25 @@
 
     }
     a{
+      align-items: center;
       img {
-        width: 50px;
-        height: 50px;
+        max-width: 50px;
+        max-height: 50px;
         border-radius: 5px;
         color: #264de4;
+      }
+      button {
+        font-family: "Raleway";
+        font-weight: 600;
+        line-height: 19px;
+        width: 100%;
+        background-color: #4CAF50;
+        border: none;
+        color: #FFF;
+        padding: 15px 32px;
+        font-size: 16px;
+        cursor: pointer;
+        align-items: center;
       }
     }
 
