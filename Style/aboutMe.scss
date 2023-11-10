@@ -1,117 +1,110 @@
 .aboutMe {
-  max-height: 600px;
-  opacity: 3;
-  max-width: 90%;
-  text-align: center;
-  margin-top:200px;
+    max-height: 600px;
+    opacity: 3;
+    max-width: 90%;
+    text-align: center;
+    margin-top: 200px;
 
-
-  .title{
-    /* animation properties */
-    color: #ffcc00;
-    opacity: 2;
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-    font-family: 'Freedom45', sans-serif;
-    -moz-animation: my-animation 15s linear infinite;
-    -webkit-animation: my-animation 15s linear infinite;
-    animation: my-animation 15s linear infinite;
-  }
-  @keyframes my-animation {
-    from {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-    to {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
-  }
-  .cv-text{
-    font-family: 'h Huddle Stone', sans-serif;
-    .about{
-      margin-left: 5px;
-      border: 2px solid;
-      border-radius: 5px;
-      max-width: 500px;
-      margin-top:10px;
-      font-size: 15px;
-      background-color: floralwhite;;
-      text-align: left;
-      color: black;
-
-
-
+    .title {
+        /* animation properties */
+        color: #ffcc00;
+        opacity: 2;
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        font-family: 'Freedom45', sans-serif;
+        -moz-animation: my-animation 15s linear infinite;
+        -webkit-animation: my-animation 15s linear infinite;
+        animation: my-animation 15s linear infinite;
     }
 
+    @keyframes my-animation {
+        from {
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+        }
 
-
-
-  }
-  .downloadCv{
-    right: 5px;
-    margin-left: 192px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-
-
-
-    p{
-      max-width: 200px;
-      margin-top:40px;
-      background: red;
-      text-align: center;
-      margin-left: 36%;
-      border-bottom: 106px;
-      border-radius: 28px;
-      font-family: 'h Huddle Stone', sans-serif;
-      font-size: 20px
-
-    }
-    a{
-      align-items: center;
-      img {
-        max-width: 50px;
-        max-height: 50px;
-        border-radius: 5px;
-        color: #264de4;
-      }
-      button {
-        font-family: "Raleway";
-        font-weight: 600;
-        line-height: 19px;
-        width: 100%;
-        background-color: #4CAF50;
-        border: none;
-        color: #FFF;
-        padding: 15px 32px;
-        font-size: 16px;
-        cursor: pointer;
-        align-items: center;
-      }
+        to {
+            -moz-transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+        }
     }
 
-  }
+    .cv-text {
+        font-family: 'Merienda', sans-serif;
+        margin-bottom: 25px;
 
+        .about {
+            margin-left: 5px;
+            border: 2px solid;
+            border-radius: 5px;
+            max-width: 500px;
+            margin-top: 10px;
+            font-size: 15px;
+            background-color: floralwhite;;
+            text-align: left;
+            color: black;
+            padding: 5px 15px;
+        }
+    }
 
-}
+    .downloadCv {
+        right: 5px;
+        margin-left: 192px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        position: absolute;
+        top: 34px;
 
-.containers:hover,
-.containers:active {
- /* !*background-color: #ffcc00;
-  width: 600px;
-  height: 500px;*!
-  height: 400px;
-  opacity: 3;
-  width: 90%;*/
-  box-shadow: 1px 1px 50px #ffcc00;
+        p {
+            max-width: 200px;
+            margin-top: 40px;
+            background: red;
+            text-align: center;
+            margin-left: 36%;
+            border-bottom: 106px;
+            border-radius: 28px;
+            font-family: 'h Huddle Stone', sans-serif;
+            font-size: 20px
 
+        }
 
+        a {
+            align-items: center;
+
+            img {
+                max-width: 50px;
+                max-height: 50px;
+                border-radius: 5px;
+                color: #264de4;
+            }
+
+            button {
+                font-family: "Raleway";
+                font-weight: 600;
+                line-height: 19px;
+                width: 100%;
+                background-color: #4CAF50;
+                border: none;
+                color: #FFF;
+                padding: 15px 32px;
+                font-size: 16px;
+                cursor: pointer;
+                align-items: center;
+            }
+        }
+    }
+
+    .gif {
+        position: absolute;
+        transform: scale(0.75);
+        bottom: -50px;
+        right: -60px;
+    }
 }
 
 
