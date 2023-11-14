@@ -1,77 +1,178 @@
 
-
 .myProjects {
-  width: 90%;
-  height: auto;
-  color: #001D32;
-  margin-top: 200px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 50px;
-
-  .title{
-    margin-top:10px;
-    /* animation properties */
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-    color: #ffcc00;;
-    font-family: 'Freedom45', sans-serif;
-    -moz-animation: my-animation 15s linear infinite;
-    -webkit-animation: my-animation 15s linear infinite;
-    animation: my-animation 15s linear infinite;
-  }
-  @keyframes my-animation {
-    from {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-    to {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
-  }
-  .containOfDivs{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-
-    .contains {
-      width: 300px;
-      border: 2px solid #001D32;
-      height: 300px;
-      margin-left: 40px;
-      margin-top: 40px;
+    width: 90%;
+    height: auto;
+    color: #001D32;
+    margin-top: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
 
 
-      img {
-        margin-left: 10px;
-        margin-top: 20px;
-        width: 280px;
-        height: 200px;
-      }
 
-      p {
-        margin-left:10px;
+    .title {
+        margin-top: 10px;
+        /* animation properties */
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        color: #ffcc00;
         font-family: 'Freedom45', sans-serif;
-
-      }
-
-    }
-    .contains:hover,
-    .contqains:active
-    {
-      border: 2px solid darkslateblue;
-      border-radius:10px;
-
+        -moz-animation: my-animation 15s linear infinite;
+        -webkit-animation: my-animation 15s linear infinite;
+        animation: my-animation 15s linear infinite;
     }
 
-  }
+    @keyframes my-animation {
+        from {
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+        }
+        to {
+            -moz-transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+        }
+    }
+
+    .containOfDivs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding:5px;
+
+        .popup{
+            display: none;
+            width: auto;
+            position: absolute;
+            background: floralwhite;
+            z-index: 3;
+            padding: 5px;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            box-shadow: 1px 1px 50px #ffcc00;
+            .logo {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+
+                .img {
+                    max-width: 50px;
+                    max-height: 50px;
+                    border: 2px solid black;
+                    border-radius: 10px;
+                    box-shadow: 1px 1px 100px darkred;
+                    font-size: 20px;
+                }
+                p {
+                    font-family: "Merienda";
+                    color: #003140;
+                    margin-right:5px;
+                }
+
+            }
+
+            .list {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: space-around;
+
+                p {
+                    color: #003140;
+                }
+
+                .img {
+                    width: 600px;
+                    height: 300px;
+                    border: 2px solid black;
+                    border-radius: 20px;
+                }
+                .img:hover {
+                    box-shadow: 1px 1px 50px #ffcc00;
+
+                }
+
+            }
+            .close {
+                font-family: "Raleway";
+                font-weight: 600;
+                line-height: 19px;
+                margin-bottom: 10px;
+                background-color: #4CAF50;
+                border: none;
+                color: #FFF;
+                padding: 15px 32px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 50px;
+            }
+            .close:hover {
+                border-radius: 50px;
+                background: darkred;
+                color: red;
+                box-shadow: 1px 1px 100px darkred;
+
+            }
+
+        }
+        .popup:hover{
+            box-shadow: 1px 1px 50px darkred;
+
+        }
+
+        .contains {
+            height: auto;
+            margin: 40px 20px 20px;
+            width: auto;
+            padding: 10px 10px 10px 10px;
+            border-radius: 10px;
 
 
+            .descriptions {
+                max-width: 200px;
+                background: none;
+                border: none;
+                outline: none;
+                height: auto;
+                cursor: pointer;
+                transition: 1s ease-in-out;
+                color: #ffcc00;
+                align-items: center;
+                font-size: 25px;
+                text-decoration: inherit;
+                text-align: center;
+                font-family: 'h Huddle Stone', sans-serif;
 
+            }
+            .descriptions:hover {
+                border-radius: 100px;
+                background: #ffcc00;
+                color: #001D32;
+                box-shadow: 1px 1px 600px #ffcc00;
+            }
+
+            img {
+
+                width: 300px;
+                height: 200px;
+                border-radius: 10px;
+
+            }
+
+            p {
+                margin-left: 10px;
+                font-family: 'Freedom45', sans-serif;
+            }
+        }
+        .contains:hover {
+            box-shadow: 1px 1px 10px darkred;
+
+
+        }
+    }
 }
 

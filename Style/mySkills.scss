@@ -1,92 +1,86 @@
 .mySkills {
-  width: 90%;
-  opacity: 3;
-  margin-top: 100px;
+    width: 90%;
+    opacity: 3;
+    margin-top: 100px;
 
-
-
-
-  .title {
-    /* animation properties */
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-    color: #ffcc00;
-    font-family: 'Freedom45', sans-serif;
-    -moz-animation: my-animation 15s linear infinite;
-    -webkit-animation: my-animation 15s linear infinite;
-    animation: my-animation 15s linear infinite;
-  }
-  @keyframes my-animation {
-    from {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-    to {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
-  }
-
-  .skill {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    border-radius: 5px;
-    margin-top:5px;
-    transition: opacity 2s ease-out 200ms;
-
-    img {
-      left: 10px;
-      width: 50px;
-      height: 50px;
-      border: 1px solid hsl(227, 10%, 10%);;
-      border-radius: 5px;
+    .title {
+        /* animation properties */
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        color: #ffcc00;
+        font-family: 'Freedom45', sans-serif;
+        -moz-animation: my-animation 15s linear infinite;
+        -webkit-animation: my-animation 15s linear infinite;
+        animation: my-animation 15s linear infinite;
     }
 
-    h1 {
-      font-family: Bradley hand, cursive;
-      margin-left: 10px;
-      margin-top: 0px;
-      height: 50px;
-      border: 1px solid hsl(227, 10%, 10%);;
-      border-radius: 5px;
+    @keyframes my-animation {
+        from {
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+        }
+
+        to {
+            -moz-transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+        }
     }
 
-  }
-  .js {
-    background: #ffcc00;
-    border: 1px solid #FFD700;
-  }
-  .react {
-    background: #61DBFB;
-    border: 1px solid #61DBFB;
-  }
+    .skill {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        border-radius: 5px;
+        margin-top: 5px;
+        transition: opacity 2s ease-out 200ms;
+        padding: 7px 2px;
 
-  .css {
-    background: #264de4;
-    border: 1px solid #264de4;
-  }
+        img {
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid hsl(227, 10%, 10%);;
+            border-radius: 5px;
+            margin: auto 5px;
+        }
 
-  .php {
-    background: #484C89;
-    border: 1px solid #777BB3;
-  }
-  .oop {
-    background: #001D32;
-    border: #001D32;
-    color: #ffffff;
-  }
+        h1 {
+            font-family: Bradley hand, cursive;
+            height: 50px;
+            border: 1px solid hsl(227, 10%, 10%);;
+            border-radius: 5px;
+            margin: auto 0;
+        }
+    }
+
+    .js {
+        background: #ffcc00;
+        border: 1px solid #FFD700;
+    }
+
+    .react {
+        background: #61DBFB;
+        border: 1px solid #61DBFB;
+    }
+
+    .css {
+        background: #264de4;
+        border: 1px solid #264de4;
+    }
+
+    .php {
+        background: #484C89;
+        border: 1px solid #777BB3;
+    }
+
+    .oop {
+        background: #001D32;
+        border: #001D32;
+        color: #ffffff;
+    }
 
 }
-/*
-.mySkills:hover,
-.mySkills:active {
-  width: 90%;
-  opacity: 3;
-
-
-}*/
