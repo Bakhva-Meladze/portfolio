@@ -12,7 +12,6 @@
     <link href="https://fonts.cdnfonts.com/css/georgia" rel="stylesheet">
 </head>
 <body>
-
  <div class="head" id="head">
    <button class="button" id="buttonAboutMe"></button>
    <button class="button" id="buttonMySkills"></button>
@@ -36,40 +35,40 @@
  <div id="aboutMe"class="aboutMe containers">
      <div class="title">there is information about me</div>
      <div class="cv-text">
-         <div class="about">
+         <div class="about" id="aboutOne">
              Hello! I'm Bakhva,
              a junior web developer with passion to improve my skills in programming.
              I'm on a continuous journey to expand my knowledge and improve my skills,
              in the ever-evolving world of web development.
          </div>
-         <div class="about">
+         <div class="about" id="aboutTwo">
              I fell in love with coding when I discovered the power of turning ideas into reality through the web.
              I'm always excited to explore new technologies and frameworks.
              The challenges and problem-solving aspects of web development are what drive me forward.
          </div>
-         <div class="about">
+         <div class="about" id="aboutThree">
              As a junior web developer, I've had the opportunity to work on projects that involve front-end and back-end development.
 
          </div>
-         <div class="about">
+         <div class="about" id="aboutFour">
              My career goal is to become a proficient, web developer.
              I'm eager to collaborate with experienced professionals, learn from them, and contribute to meaningful projects.
          </div>
-         <div class="about">
+         <div class="about" id="aboutFive">
              I'm always open to new opportunities, collaborations,
              and networking.If you have a suitable offer, I look forward to it.
 
          </div>
      </div>
+
      <div class="downloadCv">
-         <a href="images/Bakhva_Meladze%20(1).pdf" download="your-cv-filename.pdf">
+         <a href="images/Bakhva_Meladze%20(4).pdf" download="your-cv-filename.pdf">
              <button>Download CV</button>
          </a>
-
-
      </div>
-
-
+     <div class="gif">
+         <img src="/images/programmer.gif"/>
+     </div>
  </div>
  <div id="mySkills" class="mySkills containers">
      <div class="title">my skills list</div>
@@ -94,45 +93,63 @@
          <p><h1>OOP</h1></p>
      </div>
  </div>
- <div  class="myProjects containers" id="myProject">
+ <div class="overlay" id="overlay"></div>
+
+ <div class="myProjects containers" id="myProject">
      <div class="title">My Projects</div>
      <div class="containOfDivs">
+         <div  class="popup" id="popup">
+             <div class="logo" id="logo">
+                 <p>USED:</p>
+             </div>
+             <p id="text"></p>
+             <div class="list" id="list">
+             </div>
+             <button  class="close" id="close">Close</button>
+         </div>
          <div class="contains">
              <a target="_blank" href="https://codehs.com/sandbox/id/shoot-AXxskI/run">
                  <img src="images/pictureofjsGame.PNG">
              </a>
              <p>This is js game in JS</p>
+             <button  class="descriptions" id="projectOne">Description</button>
          </div>
          <div class="contains">
              <a target="_blank" href="http://shop.bakhva.online/category/all">
                  <img src="images/clothes.PNG">
              </a>
              <p>Shop Clothes in React</p>
+             <button class="descriptions" id="projectTwo">Description</button>
          </div>
          <div class="contains">
              <a target="_blank" href="https://bakhva-meladze.github.io/drump/">
                  <img src="images/drump.PNG">
              </a>
              <p>Drump in React</p>
+             <button class="descriptions" id="projectThree">Description</button>
+
          </div>
          <div class="contains">
              <a target="_blank" href="https://bakhva-meladze.github.io/calculator/">
                  <img src="images/calculator.PNG">
              </a>
              <p>Calculator in React</p>
-
+             <button class="descriptions" id="projectFour">Description</button>
          </div>
          <div class="contains">
              <a target="_blank" href="https://bakhva-meladze.github.io/random-quote/">
                  <img src="images/random-quotes.PNG">
              </a>
              <p>Random quotes in React</p>
+             <button class="descriptions" id="projectFive">Description</button>
          </div>
          <div class="contains">
              <a target="_blank" href="https://bakhva-meladze.github.io/Map/">
                  <img src="images/Map.PNG">
              </a>
              <p>Map in js</p>
+             <button class="descriptions" id="projectSix">Description</button>
+
          </div>
      </div>
  </div>
@@ -166,3 +183,5 @@
 <script type="module" src="index.js">
 
 </script>
+
+
