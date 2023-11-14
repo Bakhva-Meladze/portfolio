@@ -6,7 +6,7 @@
 .head {
   position: fixed;
   z-index: 1;
-  width: 95%;
+  width: 100%;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -18,7 +18,8 @@
   color: #001D32;
   transition: background-color 1s ease-out 100ms, opacity 1s ease-out 100ms;
   opacity: 0.8;
-  top: 1px;
+  top: 0;
+  left: 0;
 }
 .head .word {
   display: flex;
@@ -73,7 +74,6 @@
   display: none;
 }
 .head .container .divGeo {
-  /* font-size: 30px; */
   text-decoration: inherit;
   text-align: center;
   font-family: "h Huddle Stone", sans-serif;
@@ -159,7 +159,8 @@
   }
 }
 .aboutMe .cv-text {
-  font-family: "h Huddle Stone", sans-serif;
+  font-family: "Merienda", sans-serif;
+  margin-bottom: 25px;
 }
 .aboutMe .cv-text .about {
   margin-left: 5px;
@@ -171,6 +172,7 @@
   background-color: floralwhite;
   text-align: left;
   color: black;
+  padding: 5px 15px;
 }
 .aboutMe .downloadCv {
   right: 5px;
@@ -179,6 +181,8 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
+  position: absolute;
+  top: 34px;
 }
 .aboutMe .downloadCv p {
   max-width: 200px;
@@ -213,16 +217,11 @@
   cursor: pointer;
   align-items: center;
 }
-
-.containers:hover,
-.containers:active {
-  /* !*background-color: #ffcc00;
-   width: 600px;
-   height: 500px;*!
-   height: 400px;
-   opacity: 3;
-   width: 90%;*/
-  box-shadow: 1px 1px 50px #ffcc00;
+.aboutMe .gif {
+  position: absolute;
+  transform: scale(0.75);
+  bottom: -50px;
+  right: -60px;
 }
 
 .mySkills {
@@ -261,6 +260,7 @@
   border-radius: 5px;
   margin-top: 5px;
   transition: opacity 2s ease-out 200ms;
+  padding: 7px 2px;
 }
 .mySkills .skill img {
   left: 10px;
@@ -268,14 +268,14 @@
   height: 50px;
   border: 1px solid hsl(227, 10%, 10%);
   border-radius: 5px;
+  margin: auto 5px;
 }
 .mySkills .skill h1 {
   font-family: Bradley hand, cursive;
-  margin-left: 10px;
-  margin-top: 0px;
   height: 50px;
   border: 1px solid hsl(227, 10%, 10%);
   border-radius: 5px;
+  margin: auto 0;
 }
 .mySkills .js {
   background: #ffcc00;
@@ -299,14 +299,6 @@
   color: #ffffff;
 }
 
-/*
-.mySkills:hover,
-.mySkills:active {
-  width: 90%;
-  opacity: 3;
-
-
-}*/
 .myProjects {
   width: 90%;
   height: auto;
@@ -344,29 +336,118 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+.myProjects .containOfDivs .popup {
+  display: none;
+  width: auto;
+  position: absolute;
+  background: floralwhite;
+  z-index: 3;
+  padding: 5px;
+  border: 2px solid #ffcc00;
+  border-radius: 10px;
+  box-shadow: 1px 1px 50px #ffcc00;
+}
+.myProjects .containOfDivs .popup .logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: flex-start;
 }
-.myProjects .containOfDivs .contains {
-  width: 300px;
-  border: 2px solid #001D32;
+.myProjects .containOfDivs .popup .logo .img {
+  max-width: 50px;
+  max-height: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 1px 1px 100px darkred;
+  font-size: 20px;
+}
+.myProjects .containOfDivs .popup .logo p {
+  font-family: "Merienda";
+  color: #003140;
+  margin-right: 5px;
+}
+.myProjects .containOfDivs .popup .list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.myProjects .containOfDivs .popup .list p {
+  color: #003140;
+}
+.myProjects .containOfDivs .popup .list .img {
+  width: 600px;
   height: 300px;
-  margin-left: 40px;
-  margin-top: 40px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.myProjects .containOfDivs .popup .list .img:hover {
+  box-shadow: 1px 1px 50px #ffcc00;
+}
+.myProjects .containOfDivs .popup .close {
+  font-family: "Raleway";
+  font-weight: 600;
+  line-height: 19px;
+  margin-bottom: 10px;
+  background-color: #4CAF50;
+  border: none;
+  color: #FFF;
+  padding: 15px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.myProjects .containOfDivs .popup .close:hover {
+  border-radius: 50px;
+  background: darkred;
+  color: red;
+  box-shadow: 1px 1px 100px darkred;
+}
+.myProjects .containOfDivs .popup:hover {
+  box-shadow: 1px 1px 50px darkred;
+}
+.myProjects .containOfDivs .contains {
+  height: auto;
+  margin: 40px 20px 20px;
+  width: auto;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+.myProjects .containOfDivs .contains .descriptions {
+  max-width: 200px;
+  background: none;
+  border: none;
+  outline: none;
+  height: auto;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  color: #ffcc00;
+  align-items: center;
+  font-size: 25px;
+  text-decoration: inherit;
+  text-align: center;
+  font-family: "h Huddle Stone", sans-serif;
+}
+.myProjects .containOfDivs .contains .descriptions:hover {
+  border-radius: 100px;
+  background: #ffcc00;
+  color: #001D32;
+  box-shadow: 1px 1px 600px #ffcc00;
 }
 .myProjects .containOfDivs .contains img {
-  margin-left: 10px;
-  margin-top: 20px;
-  width: 280px;
+  width: 300px;
   height: 200px;
+  border-radius: 10px;
 }
 .myProjects .containOfDivs .contains p {
   margin-left: 10px;
   font-family: "Freedom45", sans-serif;
 }
-.myProjects .containOfDivs .contains:hover,
-.myProjects .containOfDivs .contqains:active {
-  border: 2px solid darkslateblue;
-  border-radius: 10px;
+.myProjects .containOfDivs .contains:hover {
+  box-shadow: 1px 1px 10px darkred;
 }
 
 .contact {
@@ -399,7 +480,7 @@
   }
 }
 .contact .containerOfAtributes {
-  margin: 5px 5px 5px 5px;
+  margin: 5px 5px 25px 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -471,20 +552,39 @@
   top: 100px;
 }
 
+@font-face {
+  font-family: "Merienda";
+  src: url("./Fonts/Merienda-VariableFont_wght.ttf");
+}
 html {
   scroll-behavior: smooth;
 }
 html body {
-  background-color: #021F23;
+  background-color: #003140;
   color: #001D32;
+}
+html body .overlay {
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  height: 250%;
+  width: 100%;
+  background: rgba(0, 29, 50, 0.7882352941);
+  display: none;
 }
 html body .containers {
   margin-left: 50px;
-  background-color: #001D32;
   color: rgb(203, 229, 255);
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
+  border: 1px solid #ffcc00;
   overflow: hidden;
   padding-top: 5px;
+  position: relative;
+}
+html body .containers:hover,
+html body .containers:active {
+  box-shadow: 1px 1px 50px #ffcc00;
+  border-color: transparent;
 }
 
 /*# sourceMappingURL=css.css.map */
