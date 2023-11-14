@@ -3,31 +3,52 @@
 @import url('https://fonts.cdnfonts.com/css/h-huddle-stone');
 @import url('https://fonts.cdnfonts.com/css/broken-crowbar');
 @import url('https://fonts.cdnfonts.com/css/georgia');
-
-
-
 @import "head";
 @import "aboutMe";
 @import "mySkills";
 @import "myProjects";
 @import "address";
 @import "chat";
+
+@font-face {
+    font-family: "Merienda";
+    src: url("./Fonts/Merienda-VariableFont_wght.ttf");
+}
+
 html {
-  scroll-behavior: smooth;
-  body {
-    background-color: #021F23;
-    color: #001D32;
+    scroll-behavior: smooth;
 
-    .containers {
+    body {
+        background-color: #003140;
+        color: #001D32;
 
-      margin-left: 50px;
-      background-color: #001D32;
-      color: rgb(203, 229, 255);
-      border-radius: 8px; /* Rounded corners */
-      overflow: hidden;
-      padding-top: 5px;
+        .overlay {
+            left: 0;
+            position: absolute;
+            z-index: 2;
+            height: 250%;
+            width: 100%;
+            background: #001d32c9;
+            display: none;
+
+        }
+
+        .containers {
+            margin-left: 50px;
+            color: rgb(203, 229, 255);
+            border-radius: 8px;
+            border: 1px solid #ffcc00;
+            overflow: hidden;
+            padding-top: 5px;
+            position: relative;
+        }
+
+        .containers:hover,
+        .containers:active {
+            box-shadow: 1px 1px 50px #ffcc00;
+            border-color: transparent;
+        }
 
     }
-  }
 }
 
