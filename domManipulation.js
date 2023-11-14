@@ -1,7 +1,11 @@
 
-import {buttonText,titleText} from "./translateText.js";
+import {buttonText,titleText,TextAboutMe,descriptionText} from "./translateText.js";
 import {htmlAttributesOfTranslate,arrayOfTextId} from "./attributes.js";
-import  {buttonAboutMe,buttonSkill, contactButton,buttonProjects,container,profession,name} from "./selectors.js";
+import  {
+    buttonAboutMe,buttonSkill,contactButton,
+    buttonProjects,container,profession,name,
+    aboutOne,aboutTwo,aboutThree,aboutFour,aboutFive,text} from "./selectors.js";
+import popupDomManipulation from "./popupDomManipulation.js";
 
 let filter = true;
 
@@ -27,9 +31,15 @@ class domManipulation {
         contactButton.innerHTML =buttonText.myContact[key];
         buttonProjects.innerHTML =buttonText.myProjects[key];
         profession.innerHTML = titleText.myExperienceName[key];
-        name.innerHTML = titleText.myName[key]
+        name.innerHTML = titleText.myName[key],
+        aboutOne.innerHTML = TextAboutMe.textOne[key],
+        aboutTwo.innerHTML = TextAboutMe.textTwo[key],
+        aboutThree.innerHTML = TextAboutMe.textThree[key],
+        aboutFour.innerHTML = TextAboutMe.textFour[key],
+        aboutFive.innerHTML = TextAboutMe.textFive[key],
         container.style.display ="none";
         localStorage.setItem("id",key);
+        popupDomManipulation.data(key);
     }
 
     changeTextTimeInterval = (divElementID,light,lightOff) => {

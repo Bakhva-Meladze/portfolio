@@ -1,137 +1,136 @@
 .head {
-  position: fixed;
-  z-index: 1;
-  width: 95%;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  background-color: #021F23;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #001D32;
-  transition: background-color 1s ease-out 100ms, opacity 1s ease-out 100ms;
-  opacity: 0.8;
-  top:1px;
-
-  .word {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     flex-wrap: nowrap;
-    justify-content: flex-end;
-
-    .numeric {
-      font-size: 30px;
-      width: auto;
-      color:  #ffcc00;
-      text-shadow: 5px 2px 1px darkblue;
-      filter: brightness(100%);
-      font-family: 'h Huddle Stone', sans-serif;
-
-
-    }
-    .name {
-      font-size: 30px;
-      width: auto;
-      color: #ffcc00;
-      text-shadow: 1px 2px 1px darkblue;
-      font-family: 'h Huddle Stone', sans-serif;
-      filter: brightness(100%);
-
-
-    }
-  }
-
-  #target{
-    width: auto;
-    length: auto;
-    color: white;
-    text-decoration: inherit;
-    text-align: center;
-    font-family: 'h Huddle Stone', sans-serif;
-    img {
-      width: 10px;
-      height: 10px;
-    }
-  }
-
-  .selector{
-    width: auto;
-    background: none;
-    border: none;
-    outline: none;
-    height: auto;
-    cursor: pointer;
-    transition: 1s ease-in-out;
-    color:  #ffcc00;
-    align-items: center;
-    font-size: 30px;
-    text-decoration: inherit;
-    text-align: center;
-    font-family: 'h Huddle Stone', sans-serif;
-
-  }
-  .container{
-    display: none;
-    .divGeo {
-      /* font-size: 30px; */
-      text-decoration: inherit;
-      text-align: center;
-      font-family: "h Huddle Stone", sans-serif;
-      color:white;
-      img {
-        width: 10px;
-        height: 10px;
-      }
-
-    }
-  }
-
-  .button {
-    max-width: 100px;
-    background: none;
-    border: none;
-    outline: none;
-    height: auto;
-    cursor: pointer;
-    transition: 1s ease-in-out;
-    color:  #ffcc00;
-    align-items: center;
-    font-size: 20px;
-    text-decoration: inherit;
-    text-align: center;
-    font-family: 'h Huddle Stone', sans-serif;
-    margin-right: 30px;
-    margin-left:30px;
-
-  }
-  .translate{
-    width: auto;
-    height: auto;
-    margin-right: 10px;
-    margin-left:10px;
-
-    .container{
-      width: auto;
-      height: auto;
-      margin-left: -10px;
-      background: #001D32;
-      border: 1px silver solid;
-      border-radius: 5px;
-    }
-  }
-
-  .button:hover,
-  .button:active {
-    border-radius: 50px;
-    background: #ffcc00;
+    background-color: #021F23;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: #001D32;
-    box-shadow: 1px 1px 100px #ffcc00;
+    transition: background-color 1s ease-out 100ms, opacity 1s ease-out 100ms;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
 
-  }
+    .word {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+
+        .numeric {
+            font-size: 30px;
+            width: auto;
+            color: #ffcc00;
+            text-shadow: 5px 2px 1px darkblue;
+            filter: brightness(100%);
+            font-family: 'h Huddle Stone', sans-serif;
+        }
+
+        .name {
+            font-size: 30px;
+            width: auto;
+            color: #ffcc00;
+            text-shadow: 1px 2px 1px darkblue;
+            font-family: 'h Huddle Stone', sans-serif;
+            filter: brightness(100%);
+        }
+    }
+
+    #target {
+        width: auto;
+        length: auto;
+        color: white;
+        text-decoration: inherit;
+        text-align: center;
+        font-family: 'h Huddle Stone', sans-serif;
+
+        img {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .selector {
+        width: auto;
+        background: none;
+        border: none;
+        outline: none;
+        height: auto;
+        cursor: pointer;
+        transition: 1s ease-in-out;
+        color: #ffcc00;
+        align-items: center;
+        font-size: 30px;
+        text-decoration: inherit;
+        text-align: center;
+        font-family: 'h Huddle Stone', sans-serif;
+    }
+
+    .container {
+        display: none;
+
+        .divGeo {
+            text-decoration: inherit;
+            text-align: center;
+            font-family: "h Huddle Stone", sans-serif;
+            color: white;
+
+            img {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+
+    .button {
+        max-width: 100px;
+        background: none;
+        border: none;
+        outline: none;
+        height: auto;
+        cursor: pointer;
+        transition: 1s ease-in-out;
+        color: #ffcc00;
+        align-items: center;
+        font-size: 20px;
+        text-decoration: inherit;
+        text-align: center;
+        font-family: 'h Huddle Stone', sans-serif;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .translate {
+        width: auto;
+        height: auto;
+        margin-right: 10px;
+        margin-left: 10px;
+
+        .container {
+            width: auto;
+            height: auto;
+            margin-left: -10px;
+            background: #001D32;
+            border: 1px silver solid;
+            border-radius: 5px;
+        }
+    }
+
+    .button:hover,
+    .button:active {
+        border-radius: 50px;
+        background: #ffcc00;
+        color: #001D32;
+        box-shadow: 1px 1px 100px #ffcc00;
+    }
 }
+
 .head:hover,
 .head:active {
-  opacity: 100%;
+    opacity: 100%;
 }
