@@ -3,7 +3,7 @@ export const description =[
     {
         id: "projectOne",
         text: descriptionText.jsGame,
-        gif: "./images/game.gif",
+        gif: "./images/gameGif.gif",
         images:["./images/javascript-39404.png"]
     },
     {
@@ -15,30 +15,30 @@ export const description =[
     }
     ,{
         id:"projectThree",
-        text: "this is my React project",
-        gif: "./images/Demo.gif",
+        text: descriptionText.reactDrump,
+        gif: "./images/drumpGif.gif",
         images: ["./images/css.png","./images/img.png"]
 
     },
     {
         id:"projectFour",
-        text: "this is my React project",
-        gif: "./images/Demo.gif",
+        text: descriptionText.reactCalculator,
+        gif: "./images/calculatorGif.gif",
         images: ["./images/css.png","./images/img.png"]
 
     },
     {
         id:"projectFive",
-        text: "this is my React project",
-        gif: "./images/Demo.gif",
+        text: descriptionText.quotes,
+        gif: "./images/randomQuotesGif.gif",
         images: ["./images/css.png","./images/img.png"]
 
     },
     {
         id:"projectSix",
-        text: "this is my React project",
-        gif: "./images/Demo.gif",
-        images: ["./images/css.png","./images/javascript-39404.png"]
+        text: descriptionText.shopPhp,
+        gif: "./images/randomQuotesGif.gif",
+        images: ["./images/css.png","./images/img.png","./images/php-logo-20743.png"]
 
     }
 ]

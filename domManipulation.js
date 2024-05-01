@@ -25,21 +25,23 @@ class domManipulation {
         filter = !filter;
     }
     changeTranslateMenu (key) {
-        document.querySelector("#target").innerHTML = htmlAttributesOfTranslate[key];
-        buttonAboutMe.innerHTML =buttonText.aboutMe[key];
-        buttonSkill.innerHTML =buttonText.mySkills[key];
-        contactButton.innerHTML =buttonText.myContact[key];
-        buttonProjects.innerHTML =buttonText.myProjects[key];
-        profession.innerHTML = titleText.myExperienceName[key];
-        name.innerHTML = titleText.myName[key],
-        aboutOne.innerHTML = TextAboutMe.textOne[key],
-        aboutTwo.innerHTML = TextAboutMe.textTwo[key],
-        aboutThree.innerHTML = TextAboutMe.textThree[key],
-        aboutFour.innerHTML = TextAboutMe.textFour[key],
-        aboutFive.innerHTML = TextAboutMe.textFive[key],
+        let i = key == null?0:key;
+
+        document.querySelector("#target").innerHTML = htmlAttributesOfTranslate[i];
+        buttonAboutMe.innerHTML =buttonText.aboutMe[i];
+        buttonSkill.innerHTML =buttonText.mySkills[i];
+        contactButton.innerHTML =buttonText.myContact[i];
+        buttonProjects.innerHTML =buttonText.myProjects[i];
+        profession.innerHTML = titleText.myExperienceName[i];
+        name.innerHTML = titleText.myName[i],
+        aboutOne.innerHTML = TextAboutMe.textOne[i],
+        aboutTwo.innerHTML = TextAboutMe.textTwo[i],
+        aboutThree.innerHTML = TextAboutMe.textThree[i],
+        aboutFour.innerHTML = TextAboutMe.textFour[i],
+        aboutFive.innerHTML = TextAboutMe.textFive[i],
         container.style.display ="none";
-        localStorage.setItem("id",key);
-        popupDomManipulation.data(key);
+        localStorage.setItem("id",i);
+        popupDomManipulation.data(i);
     }
 
     changeTextTimeInterval = (divElementID,light,lightOff) => {

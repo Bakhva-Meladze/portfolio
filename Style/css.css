@@ -343,7 +343,7 @@
   display: none;
   width: auto;
   position: absolute;
-  background: floralwhite;
+  background: #001D32;
   z-index: 3;
   padding: 5px;
   border: 2px solid #ffcc00;
@@ -366,7 +366,7 @@
 }
 .myProjects .containOfDivs .popup .logo p {
   font-family: "Merienda";
-  color: #003140;
+  color: lightgoldenrodyellow;
   margin-right: 5px;
 }
 .myProjects .containOfDivs .popup .list {
@@ -376,16 +376,17 @@
   align-content: space-around;
 }
 .myProjects .containOfDivs .popup .list p {
-  color: #003140;
+  color: lightgoldenrodyellow;
 }
 .myProjects .containOfDivs .popup .list .img {
   width: 600px;
   height: 300px;
   border: 2px solid black;
   border-radius: 20px;
+  margin-bottom: 10px;
 }
 .myProjects .containOfDivs .popup .list .img:hover {
-  box-shadow: 1px 1px 50px #ffcc00;
+  box-shadow: 1px 1px 50px darkred;
 }
 .myProjects .containOfDivs .popup .close {
   font-family: "Raleway";
@@ -435,7 +436,7 @@
   border-radius: 100px;
   background: #ffcc00;
   color: #001D32;
-  box-shadow: 1px 1px 600px #ffcc00;
+  box-shadow: 1px 1px 600px darkred;
 }
 .myProjects .containOfDivs .contains img {
   width: 300px;

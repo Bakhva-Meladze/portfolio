@@ -1,4 +1,4 @@
-import {arrayOfButtonClass,arrayOfDivs,arrayOfProjectButtonID} from "./attributes.js";
+import {arrayOfButtonClass, arrayOfDivs, arrayOfProjectButtonID, htmlAttributesOfTranslate} from "./attributes.js";
 import  domManipulation from "./domManipulation.js";
 import  {language,eng,geo,close,overlay} from"./selectors.js";
 import "./passData.js";
@@ -21,7 +21,9 @@ geo.addEventListener("click",function(e){
     translate.key =1;
 });
 addEventListener("load",function(){
-    domManipulation.changeTranslateMenu(localStorage.getItem("id"));
+    domManipulation.changeTranslateMenu(localStorage.getItem("id"),);
+    localStorage.setItem("id",0);
+
 });
 arrayOfButtonClass.forEach((value,key) =>{
     document.getElementById(value).addEventListener("click",function(){
@@ -52,6 +54,7 @@ overlay.addEventListener("click",function (e){
     document.getElementById("popup").style.display ="none";
     document.getElementById("overlay").style.display="none";
 });
+
 
 
 
